@@ -7,9 +7,6 @@ $(document).ready(function () {
       $('body').toggleClass('open-popup');
    });
 
-
-
-
    //Дебагер сетки
    $('html').keydown(function (eventObject) { //отлавливаем нажатие клавиш
       if (event.ctrlKey && event.keyCode == 71) { //если нажали Ctrl+q
@@ -17,4 +14,12 @@ $(document).ready(function () {
       }
    });
 
+   //Фикс высоты экрана
+   const appHeight = () =>
+      document.documentElement.style.setProperty(
+         "--app-height",
+         `${window.innerHeight}px`
+      );
+   window.addEventListener("resize", appHeight);
+   appHeight();
 });
