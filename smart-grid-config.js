@@ -15,7 +15,7 @@ var settings = {
          width: '1640px', /* -> @media (max-width: 1100px) */
       },
       lg: {
-         width: '1100px', /* -> @media (max-width: 1100px) */
+         width: '1280px', /* -> @media (max-width: 1100px) */
       },
       md: {
          width: '960px'
@@ -28,7 +28,7 @@ var settings = {
          width: '560px'
       },
       xxs: {
-         width: '400px',
+         width: '320px',
          fields: '10px'
       }
 
