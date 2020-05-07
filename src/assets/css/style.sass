@@ -1,0 +1,36 @@
+ /*
+ Theme Name: TM WP
+ Author: Alexandr Schetinin
+ Author URI: https://www.bristl.com
+ Version: 1.0
+ */
+
+@import 'vars'
+@import 'helpers/smart-grid'
+@import 'helpers/normalize'
+
+::placeholder
+   color: $gray
+
+::selection
+   background-color: $accent_color
+   color: #fff
+
+input, textarea
+   outline: none
+   &:focus:required:invalid
+      border-color: red
+   &:required:valid
+      border-color: green
+
+body
+   font-family: $font
+   font-size: 18px
+   min-width: 320px
+   position: relative
+   line-height: 1.65
+   overflow-x: hidden
+   color: $text_color
+
+.wrapper
+   +wrapper()
