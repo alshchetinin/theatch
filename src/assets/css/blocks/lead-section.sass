@@ -1,0 +1,42 @@
+
+.lead
+   +row-flex()
+   position: relative
+   height: $fix100vh
+   align-items: center
+   &__title
+      +col()
+      +size(8)
+      +shift-left(1)
+      +shift-xl-left(0)
+      //+size-lg(12)
+      +size-xl(12)
+      background: linear-gradient(90deg, #F857A6 0%, #FF5858 100%)
+      -webkit-text-fill-color: transparent
+      -webkit-background-clip: text
+      h1
+         font-size: 120px
+         line-height: 104.5%
+         font-weight: bold
+         font-family: $font-headline
+         +shift-xl-left(0)
+         @include lg-block()
+            font-size: 100px
+         @include md-block()
+            font-size: 80px
+         @include sm-block()
+            font-size: 52px
+         @include xs-block()
+            font-size: 36px
+            img
+               width: 20px
+         @include xxs-block()
+            font-size: 28px
+   &__picture
+      +md(display, none)
+      position: absolute
+      right: 90px
+      bottom: 10px
+      @include lg-block()
+         right: 0px
+         width: 350px
