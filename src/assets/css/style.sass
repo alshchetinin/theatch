@@ -8,6 +8,7 @@
 @import 'vars'
 @import 'helpers/smart-grid'
 @import 'helpers/normalize'
+@import 'helpers/lib'
 
 ::placeholder
    color: $gray
@@ -69,5 +70,10 @@ a
    margin: 40px 0px
    z-index: 9999
    width: 100%
+   @include sm-block()
+      margin: 20px 0px
 
 @import './blocks/naviagtion'
+@import './blocks/main-slider'
+@import './blocks/lead-section'
+@import './blocks/service-section'

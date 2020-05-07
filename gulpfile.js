@@ -69,7 +69,8 @@ const pluginsListProd = [
 Header & Footer JavaScript Boundles
 -------------------------------------------------------------------------------------------------- */
 const headerJS = [
-	"./node_modules/jquery/dist/jquery.js"
+	"./node_modules/jquery/dist/jquery.js",
+	"./node_modules/slick-carousel/slick/slick.js"
 ];
 
 const footerJS = ["./src/assets/js/**"];
