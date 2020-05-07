@@ -1,0 +1,171 @@
+.header-block
+   +row-flex()
+   align-items: center
+   position: relative
+   padding-bottom: 10px
+   z-index: 999
+   &::after
+      content: ""
+      width: calc( 100% - 20px )
+      bottom: 0px
+      height: 1px
+      background: $white
+      left: 10px
+      position: absolute
+      +sm(display, none)
+.logo
+   +col()
+   +size(2)
+   +sm(display, none)
+   &_mobile
+      display: none
+      +size-sm(6)
+      +sm(display, block)
+.header-service
+   +col()
+   +size(3)
+   display: flex
+   justify-content: center
+   +size-xl(8)
+   +sm(display, none)
+   &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding-right: 20px
+   &__picture
+      width: 44px
+      padding: 1px
+      background-image: linear-gradient(180deg, #FF403C 0%, #00284B 100%)
+      border-radius: 1000px
+      img
+         display: block
+   &__title
+      padding: 10px 0px 0px
+      font: $small-text
+      color: $white
+
+.navigation
+   +col()
+   +size(7)
+   @include xl-block
+      display: none
+   &__wrapper
+      +row-flex
+   &__item
+      +col()
+      +u-size(1,7,20px)
+
+      &_blog
+         +u-size(2,7,20px)
+
+   &__title
+      font: $text
+      color: $white
+
+   &__link
+      li
+         margin: 5px 0px
+         a
+            font-weight: bold
+            padding: 10px 0px
+
+   &__post
+      display: flex
+      flex-direction: column
+      position: relative
+      a
+         font-weight: bold
+         padding: 10px 0px
+      &::after
+         content: ""
+         width: 24px
+         height: 32px
+         background-image: url(./img/lightning.png)
+         position: absolute
+         left: -26px
+         background-size: contain
+         background-repeat: no-repeat
+         bottom: 0px
+   &_white
+      +size(12)
+      padding: 24px
+      background: $white
+      border-radius: 10px
+      color: $architect-black
+      .navigation
+         &__item
+            +u-size(3,18,20px)
+         &__title
+            color: $architect-black
+         &__link
+            a
+               color: $architect-black
+         &__post
+            a
+               color: $architect-black
+
+      @include xl-block
+         display: block
+
+.navigation-popup
+   position: absolute
+   top: 100%
+   width: 100%
+   opacity: 0
+   z-index: -1
+   transition: all .4s $transition
+   +sm(display, none)
+   @include from-to(960px, 1640px)
+      &_active
+         opacity: 1
+         z-index: 1
+         top: 120%
+.burger
+   +col()
+   +size(2)
+   +size-sm(6)
+   cursor: pointer
+   &__icon_close
+      display: none
+   &_open
+      .burger__icon_close
+         display: block
+      .burger__icon
+         display: none
+   img
+      float: right
+   @include from(1640px)
+      display: none
+
+.popup-menu-mobile
+   display: flex
+   background: #000000
+   height: 100vh
+   position: absolute
+   width: 100%
+   //top: -100%
+   right: -100%
+   z-index: 88
+   align-items: center
+   justify-content: center
+   flex-direction: column
+   transition: all .7s $transition
+   @media screen and (min-width: 940px)
+      display: none
+   &_visible
+      opacity: 1
+      right: 0
+      top: 0
+   ul
+      list-style-type: none
+      padding: 0px
+      margin: 0px
+      text-align: center
+      li
+         padding: 30px
+         margin: 0xp
+         a
+            padding: 30px
+            font: $h4
+            color: $white

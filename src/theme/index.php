@@ -1,10 +1,7 @@
 <?php get_header(); ?>
 
-<div class="wrapper">
 
-   <div class="site-content">
-      <h2><?php bloginfo('name')?></h2>
-   </div>
+<?php echo get_template_part('/blocks/main-slider')?>
 
 
-   <?php get_footer(); ?>
+<?php get_footer(); ?>

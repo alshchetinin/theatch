@@ -8,7 +8,12 @@ function wordpressify_resources() {
 add_action( 'wp_enqueue_scripts', 'wordpressify_resources' );
 
 register_nav_menus(array(
-	'top'    => 'Верхнее меню'
+	'whatwedo'    => 'Что мы делаем',
+	'about'    => 'О нас',
+	'music'    => 'Музыка',
+	'contact'    => 'Контакты',
+	'expert'    => 'Эксперты',
+	'mobile'    => 'Мобильное'
 ));
 
 if( function_exists('acf_add_options_page') ) {
