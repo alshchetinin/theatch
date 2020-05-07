@@ -19,6 +19,7 @@
    +sm(display, none)
    &_mobile
       display: none
+      +col()
       +size-sm(6)
       +sm(display, block)
 .header-service
@@ -141,7 +142,7 @@
 .popup-menu-mobile
    display: flex
    background: #000000
-   height: 100vh
+   height: $fix100vh
    position: absolute
    width: 100%
    //top: -100%
