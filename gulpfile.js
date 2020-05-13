@@ -22,6 +22,7 @@ const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const imgCompress = require('imagemin-jpeg-recompress');
 const imageminPngquant = require('imagemin-pngquant');
+const devip = require('dev-ip');
 
 /* -------------------------------------------------------------------------------------------------
 Theme Name
@@ -70,7 +71,8 @@ Header & Footer JavaScript Boundles
 -------------------------------------------------------------------------------------------------- */
 const headerJS = [
 	"./node_modules/jquery/dist/jquery.js",
-	"./node_modules/slick-carousel/slick/slick.js"
+	"./node_modules/slick-carousel/slick/slick.js",
+	"./node_modules/glider-js/glider.js"
 ];
 
 const footerJS = ["./src/assets/js/**"];
@@ -128,9 +130,12 @@ function devServer() {
 			browserSync({
 				logPrefix: "🎈 WordPressify",
 				proxy: "127.0.0.1:3020",
-				host: "127.0.0.1",
+				host: devip(),
 				port: "3010",
-				open: "local"
+				open: "local",
+				ui: {
+					port: 8080
+				}
 			});
 		}
 	);

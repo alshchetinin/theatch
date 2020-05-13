@@ -1,4 +1,21 @@
 $(document).ready(function () {
+
+   const onSlideToggleTitle = () => {
+      $('.standard-section-slide-toogle').click(function (e) {
+         e.preventDefault();
+         $(this).find('.standard-section-slide-toogle__icon').toggleClass('standard-section-slide-toogle__icon_close');
+         $(this).find('.standard-section-slide-toogle__description').slideToggle();
+
+      });
+   }
+
+   if ($(window).width() < 960) {
+      onSlideToggleTitle()
+   }
+
+
+
+
    $('.burger').click(function (e) {
       e.preventDefault();
       $(this).toggleClass('burger_open');
@@ -20,6 +37,7 @@ $(document).ready(function () {
          "--app-height",
          `${window.innerHeight}px`
       );
-   window.addEventListener("resize", appHeight);
+   //window.addEventListener("resize", appHeight);
    appHeight();
 });
+

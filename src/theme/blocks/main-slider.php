@@ -119,6 +119,7 @@ $('.main-slider').slick({
    easing: 'ease-in-out',
    autoplay: true,
    autoplaySpeed: 4500,
-   speed: 2000
+   speed: 2000,
+   arrows: false
 });
 </script>

@@ -1,0 +1,117 @@
+.service-section
+
+   &__title
+      +row-flex()
+      align-items: baseline
+      margin-bottom: 3rem
+   &__button
+      +col()
+      +size(2)
+      display: flex
+      justify-content: flex-end
+      +size-md(6)
+      @include md-block
+         justify-content: flex-start
+   &__wrapper
+      +row-flex()
+      justify-content: space-around
+      @include xl-block()
+         justify-content: flex-start
+   &__inner
+      +col()
+      +size(10)
+      +size-xl(12)
+      position: relative
+.title-section
+   &_service
+      +col()
+      +size(8)
+      +shift-left(1)
+      +shift-xl-left(0)
+      +size-xl(10)
+      +size-md(12)
+
+.service-slider
+   +row-flex()
+   align-items: stretch
+   .slick-slide
+      div
+         margin-right: 20px
+
+   &__item
+      +col()
+      +u-size(2,10, 20px)
+      $border: 6px
+      background: $architect-black
+      padding: 60px 16px 16px
+      border-radius: 10px
+      min-width: 0px
+      position: relative
+      background-clip: padding-box
+      border: solid $border transparent
+      outline-offset: -10px
+      height: 100%
+      display: flex !important
+      justify-content: space-between
+      flex-direction: column
+      @include xl-block()
+         +size-xl(4)
+      &:before
+         content: ''
+         position: absolute
+         top: 0
+         right: 0
+         bottom: 0
+         left: 0
+         z-index: -1
+         margin: -$border
+         border-radius: inherit
+         background: linear-gradient(206.56deg, #8E54E9 0%, #56B4D3 80.7%)
+         opacity: 0
+         transition: all .3s $transition
+      &:hover:before
+         opacity: 1
+
+   &__title
+      margin-bottom: 40px
+      h4
+         font-size: 32px
+         line-height: 44px
+         font-weight: bold
+         font-family: $font-text
+   &__description
+      font: $text
+      margin-bottom: 20px
+   &__icon
+      display: flex
+      flex-direction: row-reverse
+
+.next, .prev
+   position: absolute
+   top: calc( 50% - 20px )
+   transition: all .4s $transition
+   width: 30px
+   height: 30px
+   cursor: pointer
+   @include xl-block
+      width: 20px
+      height: 20px
+   @include sm-block
+      display: none
+.next
+   right: -50px
+   @include xl-block
+      right: -30px
+
+.prev
+   left: -50px
+   @include xl-block
+      left: -30px
+
+.slick-disabled
+   opacity: 0
+
+.service-slider .slick-slide
+   div
+      &:nth-child(1)
+         height: 100%

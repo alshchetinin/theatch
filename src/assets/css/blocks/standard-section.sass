@@ -1,0 +1,71 @@
+#standard
+   padding: 150px 0px
+
+.title-section
+   &_standard
+      +col()
+      +size(8)
+      +shift-left(1)
+      +shift-xl-left(0)
+      +size-xl(10)
+      +size-md(12)
+      +size-sm(12)
+      background: linear-gradient(90deg, #F857A6 0%, #FF5858 100%)
+      -webkit-text-fill-color: transparent
+      -webkit-background-clip: text
+
+.standard-section
+   +row-flex()
+   &__title
+      +row-flex()
+   &__text
+      +col()
+      +shift-left(1)
+      +shift-xl-left(0)
+      +size(4)
+      +size-md(12)
+      p
+         margin: 24px 0px
+
+   &__picture
+      +size(7)
+      +md(display, none)
+
+.standard-section-slide-toogle
+   margin: 40px 0px
+   @include md-block()
+      //width: calc( 100% - 10px )
+      padding: 10px
+      background: $architect-black
+      border-radius: 10px
+      margin: 5px 0px
+   &__title
+      display: flex
+      justify-content: space-between
+      align-items: center
+      @include md-block()
+         margin-bottom: 0px
+      h4
+         font-weight: 600
+         font-size: 24px
+         line-height: 27px
+         font-family: $font-text
+         @include md-block()
+            font-weight: bold
+            font-size: 16px
+            line-height: 19px
+   &__description
+      margin-top: 20px
+      @include md-block()
+         display: none
+   &__icon
+      background: url('./img/svg/open.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      width: 28px
+      height: 28px
+      display: none
+      @include md-block()
+         display: block
+      &_close
+         background: url('./img/svg/close.svg')

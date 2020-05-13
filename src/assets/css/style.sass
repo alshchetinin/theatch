@@ -10,6 +10,17 @@
 @import 'helpers/normalize'
 @import 'helpers/lib'
 
+@include font("aeroport", normal, 900, "./fonts/Aeroport-Bold.woff2")
+@include font("aeroport", normal, 500, "./fonts/Aeroport-medium.woff2")
+@include font("aeroport", normal, 400, "./fonts/Aeroport-regular.woff2")
+@include font("aeroport", normal, 300, "./fonts/Aeroport-light.woff2")
+
+@include font("Avenir Next", normal, 100, "./fonts/AvenirNext-Thin.woff2")
+@include font("Avenir Next", normal, 300, "./fonts/AvenirNext-Light.woff2")
+@include font("Avenir Next", normal, 400, "./fonts/AvenirNext-Regular.woff2")
+@include font("Avenir Next", normal, 500, "./fonts/AvenirNext-Medium.woff2")
+@include font("Avenir Next", normal, 600, "./fonts/AvenirNext-Demi.woff2")
+@include font("Avenir Next", normal, 700, "./fonts/AvenirNext-Bold.woff2")
 ::placeholder
    color: $gray
 
@@ -25,14 +36,19 @@ input, textarea
       border-color: green
 
 body
-   font-family: $font-text
-   font-size: 18px
+   font-family: -apple-system, BlinkMacSystemFont, $font-text
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   font-size: 16px
    min-width: 320px
    position: relative
    line-height: 1.65
    overflow-x: hidden
    color: $white
    background: #000
+
+p
+   font-family: $font-text
 a
    font: $text
    color: $white
@@ -48,6 +64,7 @@ a
    z-index: 999
    opacity: .2
    display: none
+   pointer-events: none
    @include sm-block()
       div
          div
@@ -73,7 +90,30 @@ a
    @include sm-block()
       margin: 20px 0px
 
+.title-section
+   h2
+      font: $section-title
+      font-weight: bold
+      margin: 1rem 0
+      @include sm-block
+         font: $h1-mobile
+      @include md-block
+         font-size: 52px
+
+.button
+
+   &_secondary
+      border: 1px solid #FFFFFF
+      box-sizing: border-box
+      border-radius: 10px
+      display: inline-block
+      padding: 10px
+
 @import './blocks/naviagtion'
 @import './blocks/main-slider'
 @import './blocks/lead-section'
 @import './blocks/service-section'
+@import './blocks/headline-section'
+@import './blocks/notification'
+@import './blocks/standard-section'
+@import './blocks/main-project'
