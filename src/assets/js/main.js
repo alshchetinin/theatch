@@ -1,4 +1,6 @@
 $(document).ready(function () {
+   const controller = new ScrollMagic.Controller();
+
 
    const onSlideToggleTitle = () => {
       $('.standard-section-slide-toogle').click(function (e) {

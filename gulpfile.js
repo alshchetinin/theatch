@@ -72,7 +72,10 @@ Header & Footer JavaScript Boundles
 const headerJS = [
 	"./node_modules/jquery/dist/jquery.js",
 	"./node_modules/slick-carousel/slick/slick.js",
-	"./node_modules/glider-js/glider.js"
+	"./node_modules/gsap/dist/gsap.js",
+	"./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
+	"./node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
+	"./node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"
 ];
 
 const footerJS = ["./src/assets/js/**"];
