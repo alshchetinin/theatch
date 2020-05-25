@@ -1,0 +1,62 @@
+#main-project
+   position: relative
+.main-project-list
+   +row-flex()
+.title-section
+   &_project
+      margin-bottom: 110px
+.main-project-list-item
+   height: 100vh
+   display: flex
+   flex-direction: column
+   justify-content: center
+   +col()
+   +size(4)
+   +shift-right(7)
+   +shift-left(1)
+   +size-xl(5)
+   +shift-xl-left(0)
+   &__tag
+      font-size: 16px
+      line-height: 22px
+   &__title
+      font-weight: bold
+      font-size: 44px
+      line-height: 120%
+      margin-bottom: 14px
+   &__client
+      font-weight: 600
+      font-size: 24px
+      line-height: 132%
+      margin-bottom: 24px
+   &__description
+      font-weight: normal
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 30px
+      +u-size(3,4,0px)
+
+.main-project-container
+   height: 100vh
+   width: calc( 50vw - 9px  )
+   //width: 640px
+   overflow: hidden
+   display: flex
+   overflow-x: scroll
+   position: absolute
+   z-index: 999
+   top: 0
+   right: 0
+   &__set
+      height: 100%
+      width: 100%
+      display: flex
+      //overflow: hidden
+      display: flex
+      //overflow-x: scroll
+   &__img
+      height: 100%
+      flex-grow: 0
+      flex-shrink: 0
+      width: 100%
+      background-size: cover

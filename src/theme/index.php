@@ -29,5 +29,6 @@
 <?php echo get_template_part('/blocks/notification')?>
 <?php echo get_template_part('/blocks/standard-section')?>
 <?php echo get_template_part('/blocks/main-project')?>
+<?php echo get_template_part('/blocks/standard-section')?>
 
 <?php get_footer(); ?>

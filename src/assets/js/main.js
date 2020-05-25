@@ -1,5 +1,17 @@
 $(document).ready(function () {
    const controller = new ScrollMagic.Controller();
+   const scrollDuration = 3 * $('.main-project-list-item').height();
+   const transformXimg = 3 * $('.main-project-container__img').width();
+   const tween = gsap.to(".main-project-container__set", { x: -transformXimg, ease: "linear" });
+   const scene = new ScrollMagic.Scene({
+      triggerElement: "#main-project",
+      triggerHook: "onLeave",
+      duration: scrollDuration,
+   })
+      .setTween(tween)
+      .setPin(".main-project-container", { pushfollowers: true })
+      // .addIndicators({ name: `2 (duration: ${scrollDuration})` })
+      .addTo(controller);
 
 
    const onSlideToggleTitle = () => {
@@ -14,6 +26,8 @@ $(document).ready(function () {
    if ($(window).width() < 960) {
       onSlideToggleTitle()
    }
+
+
 
 
 
