@@ -5,7 +5,7 @@
             <h2>Чем мы полезны</h2>
          </div>
          <div class="service-section__button">
-            <a href="/" class="button_secondary">Смотреть все услуги</a>
+            <a href="/" class="button button_secondary">Смотреть все услуги</a>
          </div>
       </div>
       <div class="service-section__wrapper">
