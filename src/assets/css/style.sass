@@ -92,13 +92,15 @@ a
 
 .title-section
    h2
-      font: $section-title
+      font-family: $font-headline
+      font-size: 90px
+      line-height: 96%
       font-weight: bold
       margin: 1rem 0
-      @include sm-block
-         font: $h1-mobile
       @include md-block
          font-size: 52px
+      @include sm-block
+         font-size: $h1-mobile
 
 .button
    padding: 10px
