@@ -1,19 +1,19 @@
 .notification-inner
-   +row-flex()
    justify-content: space-around
+   +row-flex()
    @include xl-block
       justify-content: space-between
 
 .notification
-   +col()
-   +size(10)
-   +size-xl(12)
    background: $architect-black
    padding: 20px 20px
    border-radius: 10px
    display: flex
    align-items: center
    justify-content: space-around
+   +col()
+   +size(10)
+   +size-xl(12)
    @include sm-block
       background: #FDB515
    @include md-block
@@ -35,6 +35,18 @@
          color: $architect-black
          font-size: 16px
       // width: 40%
+
+   &__wrapper
+      display: flex
+      align-content: center
+      justify-content: center
+   &__success
+      align-self: center
+      padding-left: 15px
+      opacity: 0
+      transition: all .3s $transition
+      &_done
+         opacity: 1
    &__form
       align-self: center
       @include md-block
@@ -77,6 +89,7 @@
             border-bottom-right-radius: 10px
             transition: background .2s $transition
             cursor: pointer
+            position: relative
             @include sm-block
                border-radius: 10px
                width: 100%
@@ -85,8 +98,22 @@
                margin: 1rem 0
             &:hover
                background: $architect-red
+            &::after
+               content: '🤟🏻'
+               position: absolute
+               width: 24px
+               height: 24px
+               right: 0px
+               top: 0px
+               z-index: 999
          .ajax-loader
             display: none
+         .wpcf7-validation-errors, .wpcf7-mail-sent-ok
+            display: none !important
+         .wpcf7-not-valid-tip
+            position: absolute
+            top: -30px
+            color: $architect-red
    &__bottom
       font-size: 12px
       line-height: 16px

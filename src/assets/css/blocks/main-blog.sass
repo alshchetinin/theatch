@@ -1,0 +1,76 @@
+#main-blog
+   padding: 150px 0px
+.main-blog
+   +row-flex()
+   &__list
+      +col()
+      +size(10)
+      +shift-left(1)
+      +shift-xl-left(0)
+      +size-xl(12)
+   &__set
+      margin-top: 40px
+      margin-bottom: 80px
+      +row-flex()
+
+.blog-item
+   transition: all .3s $transition
+   margin-top: 40px
+   margin-bottom: 40px
+   +col()
+   +u-size(2.5, 10, 20px)
+   +size-lg(3)
+   +size-md(6)
+   +size-sm(12)
+   &__picture
+      margin-bottom: 20px
+      img
+         border-radius: 10px
+   &__tag
+      font-size: 14px
+      line-height: 19px
+      letter-spacing: 0.75px
+      text-transform: uppercase
+      margin-bottom: 15px
+   &__date
+      font-size: 12px
+      line-height: 120%
+      margin-bottom: 26px
+   &__title
+      font: $h3
+      font-weight: 700
+      margin-bottom: 20px
+   &__excerpt
+      font-size: 16px
+      line-height: 22px
+   &__author
+   &:hover
+      transform: translateY(-3px)
+
+.title-section
+   &_blog, &_mail
+      +col()
+      +size(8)
+      +shift-left(1)
+      +shift-xl-left(0)
+      +size-xl(10)
+      +size-md(12)
+      +size-sm(12)
+   &_mail
+      margin-bottom: 70px
+
+.vc-ru
+   background-color: $architect-black
+   border-radius: 10px
+   font: $h3
+   font-weight: 700
+   padding: 32px
+   display: flex
+   flex-direction: column-reverse
+   margin-top: 40px
+   margin-bottom: 40px
+   +col()
+   +u-size(2.5, 10, 20px)
+   +size-lg(3)
+   +size-md(6)
+   +size-sm(12)
