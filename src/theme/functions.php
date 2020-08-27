@@ -33,3 +33,25 @@ function guttenberEditor() {
 	
 	wp_enqueue_style( 'guttenberEditor', get_theme_file_uri( '/style-editor.css' ), false );
 }
+
+add_action( 'acf/init', 'textAndIllustration' );
+//Регистрация блоков
+function textAndIllustration() {
+ 
+	// Проверяем, что функция доступна.
+	if( function_exists( 'acf_register_block_type' ) ) {
+
+		 // Регистрируем блок рекомендаций.
+		 acf_register_block_type(array(
+			  'name'              => 'textAndIllustration',
+			  'title'             => __('Текст и илюстрация'),
+			  'description'       => __('Обычно выводится только в ипотеке. Содержит заголовок, текст, кнопку'),
+			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/textAndIllustration/textAndIllustration.css',
+			  'render_template'   => '/gblocks/textAndIllustration/textAndIllustration.php',
+			  'category'          => 'common',
+			  'mode' => 'Preview',
+			  'icon'			=> 'admin-users',
+			  'mode'			=> 'Edit'
+		 ));
+	}
+}

@@ -138,7 +138,8 @@ function devServer() {
 			});
 		}
 	);
-
+	watch('./src/assets/gblocks/**/*.**', guttenbergBlocksDev, Reload);
+	watch('./src/assets/gblocks/**/*.**',guttenbergBlocksDevPhp, Reload);
 	watch('./src/assets/css/**/*.sass', stylesDev, Reload);
 	watch('./src/assets/css/**/*.sass', stylesEditorDev, Reload);
 	watch('./src/assets/css/**/*.sass', stylesBlocksDev, Reload);
@@ -223,6 +224,26 @@ function stylesBlocksDev() {
 		.pipe(browserSync.stream({ match: "**/*.css" }));
 }
 
+function guttenbergBlocksDev() {
+	return src("./src/assets/gblocks/**/*.sass")
+		//.pipe(sourcemaps.init())
+		.pipe(sass({ includePaths: "node_modules" }).on("error", sass.logError))
+		.pipe(
+			autoprefixer({
+				grid: true,
+				overrideBrowserslist: ["last 10 versions"]
+			})
+		)
+		//.pipe(sourcemaps.write("."))
+		.pipe(dest("./build/wordpress/wp-content/themes/" + themeName + "/gblocks"))
+		.pipe(browserSync.stream({ match: "**/*.css" }));
+		
+		}
+
+function guttenbergBlocksDevPhp() {
+	return src("./src/assets/gblocks/**/*.php").pipe(dest("./build/wordpress/wp-content/themes/" + themeName + "/gblocks"))
+}		
+
 function headerScriptsDev() {
 	return src(headerJS)
 		.pipe(plumber({ errorHandler: onError }))
@@ -261,6 +282,8 @@ exports.dev = series(
 	stylesBlocksDev,
 	headerScriptsDev,
 	footerScriptsDev,
+	guttenbergBlocksDev,
+	guttenbergBlocksDevPhp,
 	pluginsDev,
 	devServer
 );

@@ -1,0 +1,39 @@
+@import '../../css/fonts'
+@import '../../css/vars'
+@import '../../css/helpers/smart-grid'
+@import '../../css/helpers/normalize'
+@import '../../css/helpers/lib'
+
+.headline-section
+   +row-flex()
+   position: relative
+   //height: $fix100vh
+   align-items: center
+   padding: 150px 0px
+   &__title
+      +col()
+      +size(8)
+      +shift-left(1)
+      +shift-xl-left(0)
+      //+size-lg(12)
+      +size-xl(12)
+      h2
+         font: $section-title
+         font-weight: bold
+         line-height: 96%
+         @include md-block()
+            font-size: 80px
+         @include sm-block()
+            font-size: 52px
+         @include xs-block()
+            font-size: 36px
+         @include xxs-block()
+            font-size: 28px
+   &__picture
+      +md(display, none)
+      position: absolute
+      right: 90px
+      bottom: 40px
+      @include lg-block()
+         right: 0px
+         width: 350px
