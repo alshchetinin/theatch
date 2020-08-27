@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container">	
+<div class="wrapper">	
 	<div class="site-content page">
 	<?php the_post(); the_content();?>
 	</div>

@@ -22,7 +22,6 @@ const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const imgCompress = require('imagemin-jpeg-recompress');
 const imageminPngquant = require('imagemin-pngquant');
-const devip = require('dev-ip');
 
 /* -------------------------------------------------------------------------------------------------
 Theme Name
@@ -133,17 +132,16 @@ function devServer() {
 			browserSync({
 				logPrefix: "🎈 WordPressify",
 				proxy: "127.0.0.1:3020",
-				host: devip(),
+				host: "127.0.0.1",
 				port: "3010",
-				open: "local",
-				ui: {
-					port: 8080
-				}
+				open: "local"
 			});
 		}
 	);
 
 	watch('./src/assets/css/**/*.sass', stylesDev, Reload);
+	watch('./src/assets/css/**/*.sass', stylesEditorDev, Reload);
+	watch('./src/assets/css/**/*.sass', stylesBlocksDev, Reload);
 	watch('./src/assets/js/**', series(footerScriptsDev, Reload));
 	watch('./src/assets/img/**', series(copyImagesDev, Reload));
 	watch('./src/assets/fonts/**', series(copyFontsDev, Reload));
@@ -195,6 +193,36 @@ function stylesDev() {
 		.pipe(browserSync.stream({ match: "**/*.css" }));
 }
 
+function stylesEditorDev() {
+	return src("./src/assets/css/style-editor.sass")
+		.pipe(sourcemaps.init())
+		.pipe(sass({ includePaths: "node_modules" }).on("error", sass.logError))
+		.pipe(
+			autoprefixer({
+				grid: true,
+				overrideBrowserslist: ["last 10 versions"]
+			})
+		)
+		//.pipe(sourcemaps.write("."))
+		.pipe(dest("./build/wordpress/wp-content/themes/" + themeName))
+		.pipe(browserSync.stream({ match: "**/*.css" }));
+}
+
+function stylesBlocksDev() {
+	return src("./src/assets/css/*-block.sass")
+		//.pipe(sourcemaps.init())
+		.pipe(sass({ includePaths: "node_modules" }).on("error", sass.logError))
+		.pipe(
+			autoprefixer({
+				grid: true,
+				overrideBrowserslist: ["last 10 versions"]
+			})
+		)
+		//.pipe(sourcemaps.write("."))
+		.pipe(dest("./build/wordpress/wp-content/themes/" + themeName))
+		.pipe(browserSync.stream({ match: "**/*.css" }));
+}
+
 function headerScriptsDev() {
 	return src(headerJS)
 		.pipe(plumber({ errorHandler: onError }))
@@ -229,6 +257,8 @@ exports.dev = series(
 	copyImagesDev,
 	copyFontsDev,
 	stylesDev,
+	stylesEditorDev,
+	stylesBlocksDev,
 	headerScriptsDev,
 	footerScriptsDev,
 	pluginsDev,
@@ -264,6 +294,35 @@ function stylesProd() {
 			})
 		)
 		.pipe(dest("./dist/themes/" + themeName));
+}
+function stylesEditorProd() {
+	return src("./src/assets/css/style-editor.sass")
+		.pipe(sourcemaps.init())
+		.pipe(sass({ includePaths: "node_modules" }).on("error", sass.logError))
+		.pipe(
+			autoprefixer({
+				grid: true,
+				overrideBrowserslist: ["last 10 versions"]
+			})
+		)
+		//.pipe(sourcemaps.write("."))
+		.pipe(dest("./dist/themes/" + themeName));
+
+}
+
+function stylesBlocksProd() {
+	return src("./src/assets/css/*-block.sass")
+		//.pipe(sourcemaps.init())
+		.pipe(sass({ includePaths: "node_modules" }).on("error", sass.logError))
+		.pipe(
+			autoprefixer({
+				grid: true,
+				overrideBrowserslist: ["last 10 versions"]
+			})
+		)
+		//.pipe(sourcemaps.write("."))
+		.pipe(dest("./dist/themes/" + themeName));
+
 }
 
 function headerScriptsProd() {
@@ -327,6 +386,8 @@ exports.prod = series(
 	copyThemeProd,
 	copyFontsProd,
 	stylesProd,
+	stylesBlocksProd,
+	stylesEditorProd,
 	headerScriptsProd,
 	footerScriptsProd,
 	pluginsProd,

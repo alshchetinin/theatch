@@ -25,3 +25,11 @@ if( function_exists('acf_add_options_page') ) {
   ));
 	
 }
+
+
+
+add_action( 'enqueue_block_editor_assets', 'guttenberEditor' );
+function guttenberEditor() {
+	
+	wp_enqueue_style( 'guttenberEditor', get_theme_file_uri( '/style-editor.css' ), false );
+}
