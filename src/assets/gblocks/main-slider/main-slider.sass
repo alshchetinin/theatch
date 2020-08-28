@@ -1,0 +1,57 @@
+@import '../../css/fonts'
+@import '../../css/vars'
+@import '../../css/helpers/smart-grid'
+@import '../../css/helpers/normalize'
+@import '../../css/helpers/lib'
+
+
+.main-slider
+
+   &__item
+      height: $fix100vh
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+      position: relative
+      &:hover
+         .main-slider__arrow
+            transform: translateX(15px)
+      a
+         position: absolute
+         width: 100%
+         height: 100%
+         top: 0
+   &__wrapper
+      +wrapper()
+      height: $fix100vh
+      display: flex
+      flex-direction: column-reverse
+
+      @include sm-block()
+         justify-content: center
+   &__content
+      +row-flex()
+      display: flex
+      justify-content: space-around
+      padding-bottom: 10%
+      @include sm-block()
+         justify-content: flex-start
+
+   &__subtitle
+      +col()
+      +size(10)
+      font: $text
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4)
+
+   &__title
+      +col()
+      +size(10)
+      font: $h1
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4)
+      @include sm-block()
+         font: $h1-mobile
+   &__arrow
+      +col()
+      +size(10)
+      margin-top: 25px
+      transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1)

@@ -51,7 +51,29 @@ function textAndIllustration() {
 			  'category'          => 'common',
 			  'mode' => 'Preview',
 			  'icon'			=> 'admin-users',
-			  'mode'			=> 'Edit'
+			  'mode'			=> 'edit'
+		 ));
+	}
+}
+
+add_action( 'acf/init', 'mainSlider' );
+function mainSlider() {
+ 
+	// Проверяем, что функция доступна.
+	if( function_exists( 'acf_register_block_type' ) ) {
+
+		 // Регистрируем блок рекомендаций.
+		 acf_register_block_type(array(
+			  'name'              => 'main-slider',
+			  'title'             => __('Большой слайдер'),
+			  'description'       => __('Обычно выводится только в ипотеке. Содержит заголовок, текст, кнопку'),
+			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/main-slider/main-slider.css',
+			  'render_template'   => '/gblocks/main-slider/main-slider.php',
+			  'enqueue_script'     => get_template_directory_uri() . '/gblocks/main-slider/main-slider.js',
+			  'category'          => 'common',
+			  'mode' => 'Preview',
+			  'icon'			=> 'admin-users',
+			  'mode'			=> 'edit'
 		 ));
 	}
 }
