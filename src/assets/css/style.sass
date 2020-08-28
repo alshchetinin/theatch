@@ -81,7 +81,7 @@ a
 .open-popup
    overflow-y: hidden
 
-.home .header
+.home .header, .page-template-page-service .header
    position: absolute
    top: 0
    margin: 40px 0px
@@ -101,6 +101,15 @@ a
          font-size: 52px
       @include sm-block
          font-size: $h1-mobile
+
+.super-text
+   font: $super-text
+   @include md-block
+      font: $super-text__mobile
+.gigant-text
+   font: $gigant-text     
+   @include md-block
+      font: $gigant-text__mobile    
 
 .button
    padding: 10px
@@ -128,3 +137,4 @@ a
 @import './blocks/standard-section'
 @import './blocks/main-project'
 @import './blocks/main-blog'
+@import 'page-service'
