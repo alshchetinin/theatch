@@ -114,7 +114,8 @@
    top: 100%
    width: 100%
    opacity: 0
-   z-index: -1
+   z-index: -10
+   display: none
    transition: all .4s $transition
    +sm(display, none)
    @include from-to(960px, 1640px)
@@ -122,6 +123,7 @@
          opacity: 1
          z-index: 1
          top: 120%
+         display: block
 .burger
    +col()
    +size(2)
@@ -146,6 +148,7 @@
    position: absolute
    width: 100%
    top: -100%
+   opacity: 0
    //right: -100%
    z-index: 88
    align-items: center

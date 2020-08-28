@@ -77,3 +77,24 @@ function mainSlider() {
 		 ));
 	}
 }
+
+add_action( 'acf/init', 'stepblock' );
+function stepblock() {
+ 
+	// Проверяем, что функция доступна.
+	if( function_exists( 'acf_register_block_type' ) ) {
+
+		 // Регистрируем блок рекомендаций.
+		 acf_register_block_type(array(
+			  'name'              => 'stepblock',
+			  'title'             => __('Шаги'),
+			  'description'       => __('Обычно выводится только в ипотеке. Содержит заголовок, текст, кнопку'),
+			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/stepblock/stepblock.css',
+			  'render_template'   => '/gblocks/stepblock/stepblock.php',
+			  'category'          => 'common',
+			  'mode' => 'Preview',
+			  'icon'			=> 'admin-users',
+			  'mode'			=> 'edit'
+		 ));
+	}
+}

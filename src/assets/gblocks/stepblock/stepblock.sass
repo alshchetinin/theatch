@@ -1,0 +1,65 @@
+@import '../../css/fonts'
+@import '../../css/vars'
+@import '../../css/helpers/smart-grid'
+@import '../../css/helpers/normalize'
+@import '../../css/helpers/lib'
+
+.step-wrapper
+   +row-flex()
+.step-item   
+   padding-bottom: 170px
+   position: relative
+   +col()
+   +size(7)
+   +size-xl(12)
+   +shift-left(1)
+   +shift-xl-left(0)
+   &:last-of-type .step-item__line
+      display: none
+   &__line
+      position: absolute
+      top: 0px
+      width: 2px
+      height: 100%
+      background: $gray
+      left: 49px
+      z-index: -1
+
+   &__content
+      display: flex      
+   &__number
+      display: flex
+      width: 96px
+      height: 96px
+      background: $gray
+      border-radius: 100%
+      justify-content: center
+      align-items: center
+      flex-basic: 96px
+      flex-shrink: 0
+      span
+         font-weight: 500;
+         font-size: 56px;
+         line-height: 56px;
+         color: #000000;
+   &__text
+      padding-left: 40px
+   &__title
+      font-weight: bold;
+      font-size: 44px;
+      line-height: 48px;
+      font-family: $font-text
+      margin-bottom: 36px;
+   &__description
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 33px;
+      font-family: $font-text
+   &__list
+      ul 
+         +row-flex()
+         li
+            +col()
+            +u-size(2,6, 20px)
+            margin-bottom: 36px
+
