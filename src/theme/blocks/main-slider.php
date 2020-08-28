@@ -1,5 +1,5 @@
 <section id="main-slider">
-   <div class="main-slider">
+   <div class="main-slider"  data-slick='{   "infinite": true, "easing": "ease-in-out", "autoplay": true, "autoplaySpeed": 4500, "speed": 2000, "arrows": false}'>
       <div class="main-slider__item"
          style="background-image: url(<?php echo get_template_directory_uri()?>/img/bg.png)">
          <div class="main-slider__wrapper">
@@ -113,13 +113,9 @@
    </div>
 </section>
 
+
+
+
 <script>
-$('.main-slider').slick({
-   infinite: true,
-   easing: 'ease-in-out',
-   autoplay: true,
-   autoplaySpeed: 4500,
-   speed: 2000,
-   arrows: false
-});
+$('.main-slider').slick();
 </script>
