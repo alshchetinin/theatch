@@ -140,6 +140,7 @@ function devServer() {
 	);
 	watch('./src/assets/gblocks/**/*.**', guttenbergBlocksDev, Reload);
 	watch('./src/assets/gblocks/**/*.**',guttenbergBlocksDevPhp, Reload);
+	watch('./src/assets/gblocks/**/*.**',guttenbergBlocksDevJS, Reload);
 	watch('./src/assets/css/**/*.sass', stylesDev, Reload);
 	watch('./src/assets/css/**/*.sass', stylesEditorDev, Reload);
 	watch('./src/assets/css/**/*.sass', stylesBlocksDev, Reload);
@@ -244,6 +245,16 @@ function guttenbergBlocksDevPhp() {
 	return src("./src/assets/gblocks/**/*.php").pipe(dest("./build/wordpress/wp-content/themes/" + themeName + "/gblocks"))
 }		
 
+function guttenbergBlocksDevJS(){
+	return src("./src/assets/gblocks/**/*.js")
+	.pipe(
+		babel({
+			presets: ["@babel/preset-env"]
+		})
+	)
+	.pipe(dest("./build/wordpress/wp-content/themes/" + themeName + "/gblocks"))
+}
+
 function headerScriptsDev() {
 	return src(headerJS)
 		.pipe(plumber({ errorHandler: onError }))
@@ -284,6 +295,7 @@ exports.dev = series(
 	footerScriptsDev,
 	guttenbergBlocksDev,
 	guttenbergBlocksDevPhp,
+	guttenbergBlocksDevJS,
 	pluginsDev,
 	devServer
 );
