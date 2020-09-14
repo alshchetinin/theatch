@@ -166,6 +166,8 @@
    top: 20px
    width: 100%
    pointer-events: none
+   +xl-block()
+      display: none
    .wrapper
 
       .row
@@ -179,10 +181,12 @@
    padding: 60px 48px
    background: $architect-black
    border-radius: 10px
+   display: flex
+   flex-direction: column
    &__title
-
+      font: $h2
    &__persone
-
+      margin: 36px 0px 24px 0px
 
    &__phone
 

@@ -42,19 +42,26 @@ Template Post Type: page, services
          <div class="row">
             <div class="card-form">
                <div class="card-form__title">
-
+               <?php the_field('big-form-headine') ?>
                </div>
                <div class="card-form__persone">
-                  <div class="card-form__phone">
-
+               <div class="big-form__persone">
+                  <div class="big-form__picture">
+                     <img src="<?php the_field('big-form-picture')?>" alt="" class="img-responsive">
                   </div>
-                  <div class="card-form__mail">
-
+                  <div class="big-form__contact">
+                     <a href="mailto:<?php the_field('big-form-mail') ?>"><?php the_field('big-form-mail') ?></a>
+                     <a href="tel:<?php the_field('big-form-phone') ?>" class="phone"><?php the_field('big-form-phone') ?> </a>
                   </div>
-                  
+
+
                </div>
+               </div>
+               
+
                <div class="vertical-form">
                <?php echo do_shortcode(get_field('sticky-form')) ?>
+               <small>Нажимая на кнопку, я соглашаюсь с политикой конфиденциальности</small>
             </div>   
             </div>
             

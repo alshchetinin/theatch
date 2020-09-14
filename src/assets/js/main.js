@@ -56,14 +56,14 @@ $(document).ready(function () {
    //window.addEventListener("resize", appHeight);
    appHeight();
 
-   // var scene1 = new ScrollMagic.Scene({
-   //    triggerElement: ".page-service-content", 
-   //    duration: $('.page-service-content').innerHeight() - $('.sticky-form').innerHeight() ,
-   //    triggerHook: 0.05
-   // })
-   // .setPin(".sticky-form")
-   // //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-   // .addTo(controller);
+   var scene1 = new ScrollMagic.Scene({
+      triggerElement: ".page-service-content", 
+      duration: $('.page-service-content').innerHeight()-100,
+      triggerHook: 0.05
+   })
+   .setPin(".sticky-form")
+   //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
+   .addTo(controller);
    
 });
 
