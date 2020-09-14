@@ -133,7 +133,7 @@ function whatDoYouGet() {
 			  'name'              => 'whatDoYouGet',
 			  'title'             => __('Что вы получите'),
 			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/whatDoYouGet/whatDoYouGet.css',
+			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/whatdoyouget/whatDoYouGet.css',
 			  'render_template'   => '/gblocks/whatdoyouget/whatDoYouGet.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',

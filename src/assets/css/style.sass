@@ -148,7 +148,7 @@ a
 .wpcf7
    width: 100%
 .wpcf7-form
-   
+   position: relative
    p
       margin: 0
       display: flex
@@ -189,6 +189,7 @@ a
       transition: background .2s $transition
       cursor: pointer
       position: relative
+      height: 48px
       @include md-block
          border-radius: 10px
          width: 100%
@@ -207,12 +208,30 @@ a
          z-index: 999
    .ajax-loader
       display: none !important
-   .wpcf7-validation-errors, .wpcf7-mail-sent-ok
+   .wpcf7-validation-errors
       display: none !important
    .wpcf7-not-valid-tip
+    position: absolute;
+    top: -30px;
+    color: $architect-red;
+    font-size: 12px
+    display: none
+   .wpcf7-mail-sent-ok
       position: absolute
-      top: -30px
-      color: $architect-red
+      top: 0px
+      width: 100%
+      height: 100%
+      margin: 0px
+      padding: 0px
+      background: linear-gradient(90deg, #BFE85B 0%, #2D9D84 98.96%);
+      border-radius: 10px               
+      text-align: center
+      line-height: 3
+      border: none
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+
 
 .inline-form-one-field
    .wpcf7-form
@@ -230,7 +249,21 @@ a
          border-bottom-left-radius: 0px          
          @include md-block  
             border-radius: 10px         
-
+      .wpcf7-mail-sent-ok
+         position: absolute
+         top: 0px
+         width: 100%
+         height: 100%
+         margin: 0px
+         padding: 0px
+         background: linear-gradient(90deg, #BFE85B 0%, #2D9D84 98.96%);
+         border-radius: 10px               
+         text-align: center
+         line-height: 3
+         border: none
+         display: flex;
+         justify-content: center;
+         align-items: center;
 .form_success
    position: relative
    &::before
@@ -243,6 +276,12 @@ a
       
 .wpcf7-not-valid
    box-shadow: inset 0px 0px 0px 2px $architect-red
+
+
+.vertical-form   
+   .wpcf7-form
+      p
+         flex-direction: column
 
 
 footer

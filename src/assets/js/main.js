@@ -55,15 +55,27 @@ $(document).ready(function () {
       );
    //window.addEventListener("resize", appHeight);
    appHeight();
+
+   // var scene1 = new ScrollMagic.Scene({
+   //    triggerElement: ".page-service-content", 
+   //    duration: $('.page-service-content').innerHeight() - $('.sticky-form').innerHeight() ,
+   //    triggerHook: 0.05
+   // })
+   // .setPin(".sticky-form")
+   // //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
+   // .addTo(controller);
+   
 });
 
 
-//События формы
-document.addEventListener('wpcf7mailsent', function(event) {   
-   $('.form').addClass('form_success');   
-   function removeSuccess() {
-      $('.form_success').removeClass('form_success');
-    }
+
+
+// //События формы
+// document.addEventListener('wpcf7mailsent', function(event) {   
+//    $('.form').addClass('form_success');   
+//    function removeSuccess() {
+//       $('.form_success').removeClass('form_success');
+//     }
     
-    setTimeout(removeSuccess, 1000);
-}, false);
+//     setTimeout(removeSuccess, 1000);
+// }, false);

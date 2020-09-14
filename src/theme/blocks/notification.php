@@ -11,7 +11,7 @@
             </div>
 
             <div class="notification__form">
-               <div class="notification__wrapper form inline-form-one-field form_success">
+               <div class="notification__wrapper form inline-form-one-field">
                   <?php echo do_shortcode('[contact-form-7 id="14" title="subscription form"]') ?>
 
                </div>
