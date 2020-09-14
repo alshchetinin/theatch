@@ -1,5 +1,5 @@
 <section id="lead-section">
-   <div class="wrapper">
+   <div class="wrapper">      
       <div class="lead">
          <div class="lead__title">
             <h1>
@@ -9,7 +9,7 @@
 
          </div>
          <div class="lead__picture">
-            <img src="<?php echo get_template_directory_uri()?>/img/svg/pic1.svg" alt="">
+            <img src="<?php echo get_template_directory_uri()?>/img/svg/pic1.svg" alt="" class="img-responsive">
          </div>
 
       </div>

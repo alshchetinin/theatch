@@ -13,7 +13,8 @@
             <p>Мы считаем, когда наши клиенты в прямом контакте с нашими специалистами по рекламе, контенту, дизайнерами
                и разработчиками с самого старта проекта, поможет нам избежать факапов и сформировать правильные
                ожидания.</p>
-            <div class="standard-section-slide-toogle">
+               <div class="standard-section-slide-toogle-wrapper">
+               <div class="standard-section-slide-toogle">
                <div class="standard-section-slide-toogle__title">
                   <h4>Анализируем и выбираем <br>лучшее решение</h4>
                   <div class="standard-section-slide-toogle__icon"></div>
@@ -49,6 +50,8 @@
                </div>
 
             </div>
+               </div>
+
          </div>
          <div class="standard-section__picture">
             <img src="<?php echo get_template_directory_uri()?>/img/svg/pic3.svg" alt="">

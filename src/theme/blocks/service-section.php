@@ -17,6 +17,8 @@
                <?php $args = array(
                   'post_type' => 'services',
                   'posts_per_page' => 6,
+                  'orderby' => 'date',
+                  'order' => 'ASC',
                );
                $property = new WP_Query($args); // дальше - loop
                if ($property->have_posts()) : ?>

@@ -32,8 +32,14 @@
       +size(7)
       +md(display, none)
 
+.standard-section-slide-toogle-wrapper
+   +row-flex()
+
 .standard-section-slide-toogle
    margin: 40px 0px
+   +col()
+   +u-size(3, 4, 20px)
+   +size-md(12)
    @include md-block()
       //width: calc( 100% - 10px )
       padding: 10px

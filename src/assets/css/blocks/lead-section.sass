@@ -1,15 +1,17 @@
-
+#lead-section
+   +margin-block()
 .lead
    +row-flex()
    position: relative   
    align-items: center
    &__title
       +col()
-      +size(8)
+      +size(7)
       +shift-left(1)
       +shift-xl-left(0)
       //+size-lg(12)
-      +size-xl(12)
+      +size-xl(9)
+      +size-md(12)
       background: linear-gradient(90deg, #F857A6 0%, #FF5858 100%)
       -webkit-text-fill-color: transparent
       -webkit-background-clip: text
@@ -22,7 +24,7 @@
          @include to(1800px)
             font-size: 100px
          @include lg-block()
-            font-size: 100px
+            font-size: 80px
          @include md-block()
             font-size: 80px
          @include sm-block()
@@ -35,9 +37,14 @@
             font-size: 28px
    &__picture
       +md(display, none)
-      position: absolute
-      right: 90px
-      bottom: 10px
-      @include lg-block()
-         right: 0px
-         width: 350px
+      +col()
+      +size(3)
+      +shift-right(1)
+      +size-xl(2)
+      +shift-xl-left(0)
+      // position: absolute
+      // right: 90px
+      // bottom: 10px
+      // @include lg-block()
+      //    right: 0px
+      //    width: 350px

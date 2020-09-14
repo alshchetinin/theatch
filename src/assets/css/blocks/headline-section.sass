@@ -3,7 +3,7 @@
    position: relative
    //height: $fix100vh
    align-items: center
-   padding: 150px 0px
+   +margin-block()
    &__title
       +col()
       +size(8)
@@ -27,7 +27,7 @@
       +md(display, none)
       position: absolute
       right: 90px
-      bottom: 40px
+      bottom: -30px
       @include lg-block()
          right: 0px
          width: 350px

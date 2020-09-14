@@ -10,6 +10,8 @@ Template Post Type: project
 <section>
 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
    <div class="hero" style="background-image: url(<?php echo $url ?>)">   
+   <div class="hero__overlay"></div>
+   
       <div class="hero__content">
          <h1 class="gigant-text"><?php the_title()?></h1>
          <h3><?php the_excerpt()?></h3>

@@ -29,6 +29,8 @@ Template Post Type: page
             $category = get_the_category();
          ?>
             <div class="project-item" style="background-image:url(<?php echo $url ?>)">
+            <div class="project-item__overlay"></div>
+            
                <a href="<?php the_permalink() ?>"></a>
                <div class="project-item__content">
                   <div class="project-item__title gigant-text">
