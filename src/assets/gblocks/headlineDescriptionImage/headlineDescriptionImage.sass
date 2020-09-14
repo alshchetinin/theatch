@@ -1,0 +1,38 @@
+@import '../../css/fonts'
+@import '../../css/vars'
+@import '../../css/helpers/smart-grid'
+
+.big-img
+   +col()   
+   +size(10)
+   +size-xl(12)   
+   +shift-left(1)
+   +shift-xl-left(0)
+   margin-top: 86px
+
+.img-wrapper
+   +row-flex()
+   img
+      +col()
+      +size(12)
+      margin-bottom: 20px
+   img:nth-child(2),img:nth-child(3)
+      +col()
+      +size(6)       
+      +size-sm(12)
+      margin-bottom: 24px
+         
+.headline-description
+   +col()   
+   +size(6)
+   +size-xl(12)   
+   +shift-left(2)
+   +shift-xl-left(0)
+   &__title
+      margin-bottom: 48px
+      +md-block()
+         margin-bottom: 24px
+
+   &__text   
+      +bigtext()
+      

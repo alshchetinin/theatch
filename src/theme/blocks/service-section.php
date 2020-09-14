@@ -4,13 +4,66 @@
          <div class="title-section title-section_service">
             <h2>Чем мы полезны</h2>
          </div>
-         <div class="service-section__button">
+         <!-- <div class="service-section__button">
             <a href="/" class="button button_secondary">Смотреть все услуги</a>
+         </div> -->
+      </div>
+
+      <div class="row">
+         <div class="service-wrapper">
+            <div class="service-wrapper__row">
+
+
+               <?php $args = array(
+                  'post_type' => 'services',
+                  'posts_per_page' => 6,
+               );
+               $property = new WP_Query($args); // дальше - loop
+               if ($property->have_posts()) : ?>
+                  <?php while ($property->have_posts()) :
+                     $property->the_post(); ?>
+                     <div class="service-wrapper__col">
+                        <!-- begin servict-item -->
+                        <div class="servict-item">
+                           <a href="<?php the_permalink()?>"></a>
+                           <div class="servict-item__top">
+
+                           <div class="servict-item__title">
+                              <?php the_field('title') ?>
+                           </div>
+                           
+                           <div class="servict-item__description">
+                              <?php the_field('description') ?>
+                           </div>
+
+                           </div>
+                           
+                           <div class="servict-item__icon">
+                              <img src="<?php the_field('icon') ?>" alt="" class="">
+                           </div>
+
+                           
+                           
+ 
+
+                        </div>
+                        <!-- end servict-item -->
+                     </div>
+                  <?php endwhile; ?>
+               <?php endif;
+               wp_reset_postdata();
+               ?>
+
+
+
+            </div>
          </div>
       </div>
+</section>
+      <!--       
       <div class="service-section__wrapper">
          <div class="service-section__inner">
-            <div class="prev"><img src="<?php echo get_template_directory_uri()?>/img/svg/arrow-prev.svg" alt=""></div>
+            <div class="prev"><img src="<?php echo get_template_directory_uri() ?>/img/svg/arrow-prev.svg" alt=""></div>
             <div class="service-slider">
                <div class="service-slider__item">
                   <div class="service-slider__border"></div>
@@ -22,7 +75,7 @@
                      Проанализируем ваш сайт и продвижение, выявим слабые места и ключевые драйверы роста продаж
                   </div>
                   <div class="service-slider__icon">
-                     <img src="<?php echo get_template_directory_uri()?>/img/svg/icon1.svg" alt="">
+                     <img src="<?php echo get_template_directory_uri() ?>/img/svg/icon1.svg" alt="">
                   </div>
 
                </div>
@@ -34,7 +87,7 @@
                      Проанализируем ваш сайт и продвижение, выявим слабые места и ключевые драйверы роста продаж
                   </div>
                   <div class="service-slider__icon">
-                     <img src="<?php echo get_template_directory_uri()?>/img/svg/icon1.svg" alt="">
+                     <img src="<?php echo get_template_directory_uri() ?>/img/svg/icon1.svg" alt="">
                   </div>
 
                </div>
@@ -45,7 +98,7 @@
                   <div class="service-slider__description">
                      В зависимости от задач разработаем как одностраничный сайт, так и сайт портального типа </div>
                   <div class="service-slider__icon">
-                     <img src="<?php echo get_template_directory_uri()?>/img/svg/icon1.svg" alt="">
+                     <img src="<?php echo get_template_directory_uri() ?>/img/svg/icon1.svg" alt="">
                   </div>
 
                </div>
@@ -57,7 +110,7 @@
                      Проанализируем ваш сайт и продвижение, выявим слабые места и ключевые драйверы роста продаж
                   </div>
                   <div class="service-slider__icon">
-                     <img src="<?php echo get_template_directory_uri()?>/img/svg/icon1.svg" alt="">
+                     <img src="<?php echo get_template_directory_uri() ?>/img/svg/icon1.svg" alt="">
                   </div>
 
                </div>
@@ -69,7 +122,7 @@
                      Проанализируем ваш сайт и продвижение, выявим слабые места и ключевые драйверы роста продаж
                   </div>
                   <div class="service-slider__icon">
-                     <img src="<?php echo get_template_directory_uri()?>/img/svg/icon1.svg" alt="">
+                     <img src="<?php echo get_template_directory_uri() ?>/img/svg/icon1.svg" alt="">
                   </div>
 
                </div>
@@ -81,7 +134,7 @@
                      Проанализируем ваш сайт и продвижение, выявим слабые места и ключевые драйверы роста продаж
                   </div>
                   <div class="service-slider__icon">
-                     <img src="<?php echo get_template_directory_uri()?>/img/svg/icon1.svg" alt="">
+                     <img src="<?php echo get_template_directory_uri() ?>/img/svg/icon1.svg" alt="">
                   </div>
 
                </div>
@@ -93,12 +146,12 @@
                      Проанализируем ваш сайт и продвижение, выявим слабые места и ключевые драйверы роста продаж
                   </div>
                   <div class="service-slider__icon">
-                     <img src="<?php echo get_template_directory_uri()?>/img/svg/icon1.svg" alt="">
+                     <img src="<?php echo get_template_directory_uri() ?>/img/svg/icon1.svg" alt="">
                   </div>
 
                </div>
             </div>
-            <div class="next"><img src="<?php echo get_template_directory_uri()?>/img/svg/arrow-next.svg" alt=""></div>
+            <div class="next"><img src="<?php echo get_template_directory_uri() ?>/img/svg/arrow-next.svg" alt=""></div>
          </div>
       </div>
    </div>
@@ -146,4 +199,4 @@ $('.service-slider').on('setPosition', function() {
    var slickTrackHeight = $(slickTrack).height();
    $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
 });
-</script>
+</script> -->

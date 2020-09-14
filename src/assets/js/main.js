@@ -57,3 +57,13 @@ $(document).ready(function () {
    appHeight();
 });
 
+
+//События формы
+document.addEventListener('wpcf7mailsent', function(event) {   
+   $('.form').addClass('form_success');   
+   function removeSuccess() {
+      $('.form_success').removeClass('form_success');
+    }
+    
+    setTimeout(removeSuccess, 1000);
+}, false);

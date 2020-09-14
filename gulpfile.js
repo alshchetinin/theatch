@@ -142,9 +142,9 @@ function devServer() {
 			});
 		}
 	);
-	watch('./src/assets/gblocks/**/*.**', guttenbergBlocksDev, Reload);
-	watch('./src/assets/gblocks/**/*.**',guttenbergBlocksDevPhp, Reload);
-	watch('./src/assets/gblocks/**/*.**',guttenbergBlocksDevJS, Reload);
+	watch('./src/assets/gblocks/**/*.sass', guttenbergBlocksDev, Reload);
+	watch('./src/assets/gblocks/**/*.php',guttenbergBlocksDevPhp, Reload);
+	watch('./src/assets/gblocks/**/*.js',guttenbergBlocksDevJS, Reload);
 	watch('./src/assets/css/**/*.sass', stylesDev, Reload);
 	watch('./src/assets/css/**/*.sass', stylesEditorDev, Reload);
 	watch('./src/assets/css/**/*.sass', stylesBlocksDev, Reload);

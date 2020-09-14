@@ -1,12 +1,15 @@
+@import 'helpers/smart-grid'
+
 $architect-black: #333333
 $architect-navy: #00284B
 $architect-red: #FF403C
 $text: #273342
 $white: #ffffff
-$font-text: 'Avenir Next', sans-serif
-$font-headline: 'aeroport','Avenir Next', sans-serif
 $gray: #EDEDED
 $gradient: linear-gradient(90deg, #F857A6 0%, #FF5858 100%)
+
+$font-text: 'Avenir Next', sans-serif
+$font-headline: 'aeroport','Avenir Next', sans-serif
 $section-title: 90px/96% $font-headline  
 $super-text: bold 200px/96% $font-headline 
 $super-text__mobile: bold 72px/100% $font-headline
@@ -14,9 +17,29 @@ $gigant-text: bold 70px/103% $font-headline
 $gigant-text__mobile: bold 28px/123% $font-headline 
 $h1: bold 44px $font-headline
 $h1-mobile: 32px
-$h3: bold 24px/132% $font-text  
+$h2: bold 32px/112% $font-headline
+$h3: bold 24px/132% $font-text 
+$h3-mobile: bold 18px/132% $font-text  
 $h4: bold 24px/100% $font-text  
-$text: 16px $font-text
+$text: normal 16px $font-text
 $small-text: 12px $font-text 
+
+=bigtext()
+   font-family: $font-text
+   font-size: 24px
+   font-weight: 600
+   line-height: 1.3
+
+   @media screen and (max-width: $break_md)
+      font-size: 16px
+
 $transition: cubic-bezier(0.65, 0, 0.35, 1)
 $fix100vh: 100vh
+
+$offset-block: 334px
+=margin-block()
+   margin-bottom: ($offset-block / 2)
+   margin-top: ($offset-block / 2)
+   @media screen and (max-width: $break_md)
+      margin-bottom: ($offset-block / 4)
+      margin-top: ($offset-block / 4)

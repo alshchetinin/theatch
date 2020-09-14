@@ -4,6 +4,20 @@
 @import '../../css/helpers/normalize'
 @import '../../css/helpers/lib'
 
+.step
+   +margin-block()
+   .title-section
+      margin-bottom: 80px
+      +row-flex()
+      h2
+         +col()
+         +size(7)
+         +size-xl(12)
+         +shift-left(1)
+         +shift-xl-left(0)
+      @include md-block
+         margin-bottom: 40px
+
 .step-wrapper
    +row-flex()
 .step-item   
@@ -16,6 +30,12 @@
    +shift-xl-left(0)
    &:last-of-type .step-item__line
       display: none
+   &:not(:first-of-type) .step-item__number
+      background: #000
+      span
+         color: $white
+   @include md-block
+      padding-bottom: 70px         
    &__line
       position: absolute
       top: 0px
@@ -24,37 +44,54 @@
       background: $gray
       left: 49px
       z-index: -1
-
+      @include md-block
+         display: none
    &__content
       display: flex      
+      @include md-block
+         flex-direction: column
    &__number
       display: flex
       width: 96px
       height: 96px
       background: $gray
+      border: 2px solid $gray
       border-radius: 100%
       justify-content: center
       align-items: center
       flex-basic: 96px
       flex-shrink: 0
+      @include md-block
+         width: 36px
+         height: 36px
+         margin-bottom: 16px
       span
          font-weight: 500;
          font-size: 56px;
          line-height: 56px;
          color: #000000;
+         @include md-block
+            font-size: 24px
+            line-height: 24px
    &__text
       padding-left: 40px
+      @include md-block
+         padding-left: 0px
    &__title
       font-weight: bold;
       font-size: 44px;
-      line-height: 48px;
+      line-height: 102%;
       font-family: $font-text
       margin-bottom: 36px;
+      @include md-block
+         font: $h3-mobile
    &__description
       font-weight: 500;
       font-size: 24px;
       line-height: 33px;
       font-family: $font-text
+      @include md-block         
+         font-size: 18px      
    &__list
       ul 
          +row-flex()
@@ -62,4 +99,9 @@
             +col()
             +u-size(2,6, 20px)
             margin-bottom: 36px
+            font-size: 24px
+            line-height: 150%
+            @include md-block
+               +u-size(2,4, 20px)
+               font-size: 18px
 

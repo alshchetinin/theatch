@@ -1,0 +1,56 @@
+@import '../../css/fonts'
+@import '../../css/vars'
+@import '../../css/helpers/smart-grid'
+@import '../../css/helpers/normalize'
+@import '../../css/helpers/lib'
+
+.analyzing
+   +margin-block()
+   &__headline
+      +col()
+      +size(8)
+      +size-xl(12)
+      +shift-left(1)
+      +shift-xl-left(0)
+      margin-bottom: 52px
+   &__items
+
+.analyzing-item
+   margin-bottom: 100px
+   h3
+      font: $h1
+      margin-bottom: 24px
+   p
+      font-family: $font-text
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;      
+   &__top
+      +col()
+      +size(8)
+      +size-xl(12)
+      +shift-left(1)
+      +shift-xl-left(0)
+      margin-bottom: 48px
+   &__bottom
+      
+      h3, p
+         +col()
+         +size(8)
+         +size-xl(12)
+         +shift-left(1)
+         +shift-xl-left(0)
+      p
+         margin-bottom: 52px         
+   &__img
+      +col()
+      +size(8)
+      +size-xl(12)
+      +shift-left(1)
+      +shift-xl-left(0)
+      &_wild
+         +col()
+         +size(9)
+         +size-xl(12)
+         +shift-left(0)
+         +shift-xl-left(0)         

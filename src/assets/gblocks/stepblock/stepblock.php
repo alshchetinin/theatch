@@ -1,10 +1,14 @@
-<section>
+<section class="step">
    <div class="wrapper">
+         <div class="title-section">
+            <h2><?php the_field('zagolovok_bloka',)?> </h2>
+         </div>
+
       <div class="step-wrapper">
 
-      <?php $i = 0; ?>
+      
       <?php while( have_rows('steps',) ): the_row(); 
-            $i++; 
+      
 				// переменные
 				$hedline = get_sub_field('zagolovok');
             $text = get_sub_field('text');            
@@ -14,7 +18,7 @@
             
             <div class="step-item__content">
                <div class="step-item__number">
-                  <span><?php echo $i; ?></span>
+                  <span><?php echo get_row_index(); ?></span>
                </div>
                <div class="step-item__text">
                <div class="step-item__title"><?php echo $hedline?></div>

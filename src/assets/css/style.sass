@@ -58,6 +58,15 @@ a
       opacity: .6
 .wrapper
    +wrapper()
+.row
+   +row-flex()
+
+.img-responsive
+   display: block
+   max-width: 100%
+   height: auto
+   &.img-width
+      width: 100%
 
 .debug-grid
    +debug(red, 1px solid #fff)
@@ -81,7 +90,7 @@ a
 .open-popup
    overflow-y: hidden
 
-.home .header, .page-template-page-service .header
+.home .header, .page-template-page-service .header, .single-project .header, .services-template-page-service .header
    position: absolute
    top: 0
    margin: 40px 0px
@@ -128,6 +137,145 @@ a
       background: transparent
       display: inline-block
 
+
+.textSelection
+   padding: 12px
+   background: $white     
+   border-radius: 10px
+   color: #000    
+   margin: 16px 0px
+
+.wpcf7
+   width: 100%
+.wpcf7-form
+   
+   p
+      margin: 0
+      display: flex
+      // margin: 1rem 0
+      @include md-block
+         flex-direction: column
+   input:not([type="submit"])
+      background: #212121
+      border-top-left-radius: 10px
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+      border-top-right-radius: 10px      
+      border: none
+      outline: none
+      height: 48px
+      padding-left: 14px
+      color: $white
+      &::placeholder
+         font: $text
+         color: #BDBDBD
+         // padding: 14px
+         @include sm-block
+            color: #4F4F4F
+      @include md-block
+         border-radius: 10px
+         width: calc( 100% - 14px )         
+   input[type="submit"]
+      background: #000000
+      border: none
+      outline: none
+      color: $white
+      font: $text
+      padding: 0px 24px
+      border-top-left-radius: 10px
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+      border-top-right-radius: 10px  
+      transition: background .2s $transition
+      cursor: pointer
+      position: relative
+      @include md-block
+         border-radius: 10px
+         width: 100%
+         // padding: 20px 24px
+         height: 48px
+         margin: 1rem 0
+      &:hover
+         background: $architect-red
+      &::after
+         content: '🤟🏻'
+         position: absolute
+         width: 24px
+         height: 24px
+         right: 0px
+         top: 0px
+         z-index: 999
+   .ajax-loader
+      display: none !important
+   .wpcf7-validation-errors, .wpcf7-mail-sent-ok
+      display: none !important
+   .wpcf7-not-valid-tip
+      position: absolute
+      top: -30px
+      color: $architect-red
+
+.inline-form-one-field
+   .wpcf7-form
+      input:not([type="submit"])
+         border-top-left-radius: 10px
+         border-bottom-left-radius: 10px
+         border-bottom-right-radius: 0px
+         border-top-right-radius: 0px         
+         @include md-block  
+            border-radius: 10px
+      input[type="submit"]
+         border-bottom-right-radius: 10px
+         border-top-right-radius: 10px       
+         border-top-left-radius: 0px
+         border-bottom-left-radius: 0px          
+         @include md-block  
+            border-radius: 10px         
+
+.form_success
+   position: relative
+   &::before
+      position: absolute
+      content: '🤟🏻'
+      width: 30px
+      height: 30px
+      right: -33px
+      top: 10px
+      
+.wpcf7-not-valid
+   box-shadow: inset 0px 0px 0px 2px $architect-red
+
+
+footer
+   margin: 24px 0px
+.footer
+   +col()
+   +size(12)   
+   padding: 12px 24px
+   background: $white
+   border-radius: 10px
+   font: $text
+   &__nav
+      ul
+         display: flex
+         justify-content: space-between
+         
+         +sm-block()            
+            flex-wrap: wrap
+         li
+            +sm-block()
+               flex-basis: calc( 50% - 12px )
+               
+            a
+               color: $architect-black
+               display: block
+               padding: 4px 0px
+
+.g-block
+   +margin-block()
+   display: block
+   
+.page-title
+   margin: 80px 0px   
 @import './blocks/naviagtion'
 @import './blocks/main-slider'
 @import './blocks/lead-section'
@@ -138,3 +286,5 @@ a
 @import './blocks/main-project'
 @import './blocks/main-blog'
 @import 'page-service'
+@import 'single-project'
+@import 'page-project'

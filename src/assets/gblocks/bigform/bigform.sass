@@ -1,0 +1,53 @@
+@import '../../css/fonts'
+@import '../../css/vars'
+@import '../../css/helpers/smart-grid'
+@import '../../css/helpers/normalize'
+@import '../../css/helpers/lib'
+
+.big-form
+   +col()
+   +size(12)
+   background: $architect-black
+   padding: 36px
+   border-radius: 10px
+   display: flex
+   justify-content: space-between
+   align-items: center
+   @include xl-block
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start      
+         
+   &__headline
+      font: $h1
+      flex-basis: 24%
+      @include xl-block
+         margin-bottom: 32px 
+      @include md-block
+         font-size: $h1-mobile   
+   &__form      
+      @include xl-block
+         margin-bottom: 32px
+         width: 100%            
+      input
+         margin-right: 20px
+         @include md-block
+            margin-bottom: 24px
+      input[type="submit"]
+         @include md-block
+            margin: 0px
+   &__persone
+      display: flex
+      align-items: center
+      flex-basis: 20%
+   &__picture
+      width: 80px
+      margin-right: 15px
+   &__contact
+      display: flex
+      flex-direction: column
+
+.phone
+   font: $h3
+   @include md-block
+      font-size: 18px

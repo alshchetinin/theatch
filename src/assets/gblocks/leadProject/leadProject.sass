@@ -1,0 +1,25 @@
+@import '../../css/fonts'
+@import '../../css/vars'
+@import '../../css/helpers/smart-grid'
+
+.lead-project
+   +col()   
+   +size(7)
+   +size-xl(12)   
+   +shift-left(2)
+   +shift-xl-left(0)
+   // +margin-block()
+   &__title
+      margin-bottom: 48px
+      +md-block()
+         margin-bottom: 24px
+   &__text
+      +bigtext()
+      margin-bottom: 48px
+      +md-block()         
+         margin-bottom: 24px
+   &__link
+      a
+         +bigtext()
+         color: #F2C94C         
+         

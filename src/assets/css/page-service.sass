@@ -3,7 +3,7 @@
    z-index: 1
    &__row
       +row-flex()
-   &__content            
+   &__content
       +col()
       +size(9)
       +size-xl(12)
@@ -11,6 +11,47 @@
       +shift-xl-left(0)
       h1
          margin-bottom: 40px
-      
+
+.service-header-form
+   margin-top: 60px
+   display: inline-flex
+   align-items: center
+   padding: 10px 28px
+   background: $architect-black
+   border-radius: 10px
+   @include md-block()
+      flex-direction: column      
+   &__photo
+      width: 50px
+   &__text
+      font: $text
+      font-weight: bold
+   &__form
+
+   div
+      margin-right: 32px
+      @include md-block()
+         margin-right: 0px
+         margin-bottom: 24px
+      &:last-of-type
+         margin-right: 0px
+         margin-bottom: 0px
 
 
+.more-service   
+   +margin-block()
+   .title-section
+      +col()
+      +size(8)
+      +size-xl(12)
+      +shift-left(0)
+      +shift-xl-left(0)
+      margin-bottom: 52px;
+   .col
+      +xl-block()
+         +u-size(2,10,20px)
+      +col()
+      +size(2)   
+      +size-md(6) 
+      +size-sm(12)   
+      display: flex
