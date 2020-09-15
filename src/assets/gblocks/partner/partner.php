@@ -3,7 +3,7 @@
    <div class="row">
       <div class="partner">
          <div class="partner__title">
-            <h2 class="gigant-text" ><?php the_field('headline')?></h2>
+            <h2 ><?php the_field('headline')?></h2>
          </div>
          <div class="partner__logos">
 

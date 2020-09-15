@@ -29,16 +29,14 @@
    &__subtitle
       +col()
       +size(10)
-      font: $text
+      +font-text()
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4)
 
    &__title
       +col()
       +size(10)
-      font: $h1
+      +font-h1()
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4)
-      @include sm-block()
-         font: $h1-mobile
    &__arrow
       +col()
       +size(10)

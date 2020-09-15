@@ -4,7 +4,7 @@
          <!-- begin lead-project -->
          <div class="lead-project">
             <div class="lead-project__title">
-               <h2 class="gigant-text"><?php the_field('title') ?></h2>
+               <h2 class="font-gigant"><?php the_field('title') ?></h2>
             </div>
             <div class="lead-project__text">
                <?php the_field('text') ?>

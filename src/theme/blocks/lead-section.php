@@ -2,7 +2,7 @@
    <div class="wrapper">      
       <div class="lead">
          <div class="lead__title">
-            <h1>
+            <h1 class="font-super-gigant">
                <img src="<?php echo get_template_directory_uri()?>/img/svg/rhombus-gradient.svg" alt=""> The Architect
                <br>Диджитал эксперт в&nbsp;девелопменте
             </h1>

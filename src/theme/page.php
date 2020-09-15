@@ -3,11 +3,11 @@
    <div class="wrapper">
       <div class="row">
          <div class="page-title">
-            <h1 class="super-text"><?php the_title() ?></h1>
+            <h1 class="very-big-text"><?php the_title() ?></h1>
          </div>         
       </div>
       <div class="row">
-      <h2 class="gigant-text">Страница в разработке</h2>
+      <h2 class="font-gigant">Страница в разработке</h2>
       </div>
    </div>
 </section>

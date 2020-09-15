@@ -9,7 +9,7 @@
    <div class="wrapper">
       <div class="headline-section">
          <div class="headline-section__title">
-            <h2>
+            <h2 class="font-super-gigant">
                Создаем<br>
                решения ближе <br>к&nbsp;вашим пользователям,
                которые они <br>действительно хотят<br>

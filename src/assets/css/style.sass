@@ -10,17 +10,139 @@
 @import 'helpers/normalize'
 @import 'helpers/lib'
 
-@include font("aeroport", normal, 900, "./fonts/Aeroport-Bold.woff2")
-@include font("aeroport", normal, 500, "./fonts/Aeroport-medium.woff2")
-@include font("aeroport", normal, 400, "./fonts/Aeroport-regular.woff2")
-@include font("aeroport", normal, 300, "./fonts/Aeroport-light.woff2")
++font("aeroport", normal, 900, "./fonts/Aeroport-Bold.woff2")
++font("aeroport", normal, 500, "./fonts/Aeroport-medium.woff2")
++font("aeroport", normal, 400, "./fonts/Aeroport-regular.woff2")
++font("aeroport", normal, 300, "./fonts/Aeroport-light.woff2")
 
-@include font("Avenir Next", normal, 100, "./fonts/AvenirNext-Thin.woff2")
-@include font("Avenir Next", normal, 300, "./fonts/AvenirNext-Light.woff2")
-@include font("Avenir Next", normal, 400, "./fonts/AvenirNext-Regular.woff2")
-@include font("Avenir Next", normal, 500, "./fonts/AvenirNext-Medium.woff2")
-@include font("Avenir Next", normal, 600, "./fonts/AvenirNext-Demi.woff2")
-@include font("Avenir Next", normal, 700, "./fonts/AvenirNext-Bold.woff2")
++font("Avenir Next", normal, 100, "./fonts/AvenirNext-Thin.woff2")
++font("Avenir Next", normal, 300, "./fonts/AvenirNext-Light.woff2")
++font("Avenir Next", normal, 400, "./fonts/AvenirNext-Regular.woff2")
++font("Avenir Next", normal, 500, "./fonts/AvenirNext-Medium.woff2")
++font("Avenir Next", normal, 600, "./fonts/AvenirNext-Demi.woff2")
++font("Avenir Next", normal, 700, "./fonts/AvenirNext-Bold.woff2")
+
+
+@mixin font-super-gigant
+   font-size: 100px
+   font-family: $font-headline
+   font-weight: bold
+   line-height: 0.96
+   +xl-block()
+      font-size: 80px
+   +md-block()
+      font-size: 60px   
+   +sm-block()
+      font-size: 28px         
+
+@mixin font-gigant
+   font-size: 70px
+   font-family: $font-headline
+   font-weight: bold
+   line-height: 1.09
+   +xl-block()
+      font-size: 50px
+   +md-block()
+      font-size: 30px   
+   +sm-block()
+      font-size: 24px
+
+@mixin font-h1
+   font-size: 44px
+   font-family: $font-headline
+   font-weight: bold
+   line-height: 1.157
+
+@mixin font-h2
+   font-size: 32px
+   font-family: $font-headline
+   font-weight: bold
+   line-height: 1.124
+
+@mixin font-h3
+   font-size: 24px
+   font-family: $font-text
+   font-weight: 600
+   line-height: 1.5
+
+@mixin font-h4
+   font-size: 20px
+   font-family: $font-text
+   font-weight: 600
+   line-height: 1.2
+
+@mixin font-h5
+   font-size: 16px
+   font-family: $font-text
+   font-weight: 600
+
+@mixin font-h6
+   font-size: 14px
+   font-family: $font-text
+   font-weight: 600
+
+@mixin font-big-text
+   font-size: 24px
+   font-family: $font-text
+   font-weight: 600
+   line-height: 1.3
+
+@mixin font-text
+   font-size: 16px
+   font-family: $font-text
+   font-weight: normal
+   line-height: 1.4
+
+@mixin font-small-text
+   font-size: 12px
+   font-family: $font-text
+   font-weight: normal
+   line-height: 1.5
+
+@mixin font-small-text-bold
+   font-size: 12px
+   font-family: $font-text
+   font-weight: 700
+   line-height: 2
+
+@mixin font-text-bold
+   font-size: 16px
+   font-family: $font-text
+   font-weight: 700
+   line-height: 1.5
+
+
+
+.very-big-text
+   font: $very-big-text
+   @include md-block
+      font: $very-big-text__mobile   
+
+.font-super-gigant
+   +font-super-gigant()
+
+.font-gigant
+   +font-gigant()
+
+.font-h1
+   +font-h1()
+
+.font-h2
+   +font-h2()
+
+.font-h3
+   +font-h3()
+
+.font-h4
+   +font-h4()
+
+.font-h5
+   +font-h5()
+
+.font-h6
+   +font-h6()
+
+
 ::placeholder
    color: $gray
 
@@ -34,7 +156,18 @@ input, textarea
       border-color: red
    &:required:valid
       border-color: green
-
+h1
+   +font-h1()
+h2
+   +font-h2()   
+h3
+   +font-h3()
+h4
+   +font-h4()
+h5
+   +font-h5()
+h6
+   +font-h6()      
 body
    font-family: -apple-system, BlinkMacSystemFont, $font-text
    -webkit-font-smoothing: antialiased
@@ -100,26 +233,6 @@ a
    width: 100%
    @include sm-block()
       margin: 20px 0px
-
-.title-section
-   h2
-      font-family: $font-headline
-      font-size: 100px
-      line-height: 96%
-      font-weight: bold      
-      @include md-block
-         font-size: 52px
-      @include sm-block
-         font-size: $h1-mobile
-
-.super-text
-   font: $super-text
-   @include md-block
-      font: $super-text__mobile
-.gigant-text
-   font: $gigant-text     
-   @include md-block
-      font: $gigant-text__mobile    
 
 .button
    padding: 10px
@@ -313,9 +426,6 @@ footer
    margin: $offset-block 0px
 
 
-.testmagrin
-   +margin-block()   
-
 @import './blocks/naviagtion'
 @import './blocks/main-slider'
 @import './blocks/lead-section'
@@ -328,3 +438,5 @@ footer
 @import 'page-service'
 @import 'single-project'
 @import 'page-project'
+
+

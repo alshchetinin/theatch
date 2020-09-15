@@ -2,7 +2,7 @@
    <div class="wrapper">
       <div class="service-section__title">
          <div class="title-section title-section_service">
-            <h2>Чем мы полезны</h2>
+            <h2 class="font-super-gigant">Чем мы полезны</h2>
          </div>
          <!-- <div class="service-section__button">
             <a href="/" class="button button_secondary">Смотреть все услуги</a>

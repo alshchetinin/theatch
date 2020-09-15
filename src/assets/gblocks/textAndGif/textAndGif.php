@@ -4,7 +4,7 @@
    <div class="row">
       <div class="text-and-gif">
          <div class="text-and-gif__header">
-               <h2 class="gigant-text" style="background-image: linear-gradient(<?php the_field('gradient', $post_id )?>);"><?php the_field('zagolovok_bloka',)?> </h2>
+               <h2 class="font-gigant" style="background-image: linear-gradient(<?php the_field('gradient', $post_id )?>);"><?php the_field('zagolovok_bloka',)?> </h2>
          </div>
          <div class="text-and-gif__items">
 

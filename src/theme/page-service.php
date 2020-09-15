@@ -11,8 +11,8 @@ Template Post Type: page, services
       <div class="wrapper">
          <div class="service-header__row">
             <div class="service-header__content">
-               <h1 class="super-text"><?php the_title() ?></h1>
-               <p class="gigant-text">Анализируем интернет-маркетинг девелопера и составляем рекомендации по увеличению конверсии и снижению стоимости заявки</p>
+               <h1 class="very-big-text"><?php the_title() ?></h1>
+               <p class="font-gigant">Анализируем интернет-маркетинг девелопера и составляем рекомендации по увеличению конверсии и снижению стоимости заявки</p>
                <div class="service-header-form">
                   <div class="service-header-form__photo">
                      <img src="<?php the_field('form_picture') ?>" alt="" class="img-responsive">
@@ -79,7 +79,7 @@ Template Post Type: page, services
    <div class="row">
       <div class="partner">
          <div class="partner__title">
-            <h2 class="gigant-text" ><?php the_field('headline-partner')?></h2>
+            <h2 ><?php the_field('headline-partner')?></h2>
          </div>
          <div class="partner__logos">
 
@@ -108,7 +108,7 @@ Template Post Type: page, services
       <div class="quote">
          <?php $post_id = get_the_ID()?>
          <div class="quote__text" >
-            <h2 class="gigant-text" style="background-image: linear-gradient(<?php the_field('gradient', $post_id )?>);">
+            <h2 class="font-gigant" style="background-image: linear-gradient(<?php the_field('gradient', $post_id )?>);">
             <span class="quote__mark">“</span>
             <br>
             <?php the_field('quote-text')?></h2>
@@ -170,7 +170,7 @@ Template Post Type: page, services
    <div class="wrapper">
       <div class="row">
          <div class="title-section">
-            <h2 class="super-text">Услуги, которые вам понравятся</h2>
+            <h2 class="font-gigant">Услуги, которые вам понравятся</h2>
          </div>
       </div>
       <div class="row">

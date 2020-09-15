@@ -3,7 +3,7 @@
       <div class="main-project-list">
          <div class="main-project-list-item">
             <div class="title-section title-section_project">
-               <h2>Свежие кейсы </h2>
+               <h2 class="font-super-gigant">Свежие кейсы </h2>
             </div>
             <div class="main-project-list-item__tag">Сайт</div>
             <div class="main-project-list-item__title">ЖК «Среда»</div>
@@ -66,7 +66,7 @@
    <div class="wrapper">
       <div class="main-project-mobile-list">
          <div class="title-section title-section_project">
-            <h2>Свежие кейсы </h2>
+            <h2 class="font-super-gigant">Свежие кейсы </h2>
          </div>
          <div class="main-project-mobile-list-item">
             <div class="main-project-mobile-list-item__img">

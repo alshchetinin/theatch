@@ -1,7 +1,7 @@
 <section class="step g-block">
    <div class="wrapper">
          <div class="title-section">
-            <h2><?php the_field('zagolovok_bloka',)?> </h2>
+            <h2 class="font-super-gigant"><?php the_field('zagolovok_bloka',)?> </h2>
          </div>
 
       <div class="step-wrapper">

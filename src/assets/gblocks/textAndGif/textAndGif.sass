@@ -46,14 +46,15 @@
       padding: 6px 16px
       background: $architect-black
       margin-right: 20px
+      +font-text()
       @include md-block()
          margin-bottom: 8px
    &__headline
-      font: $h3
+      +font-h3()
 
    &__bottom
       p
-         font: $h2
+         +font-h2()
 
    &__gif
       +col()

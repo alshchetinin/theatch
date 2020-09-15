@@ -2,7 +2,7 @@
    <div class="wrapper">
       <div class="standard-section__title">
          <div class="title-section title-section_standard">
-            <h2>Высокие стандарты, тесная коммуникация, никакого булшита</h2>
+            <h2 class="font-super-gigant">Высокие стандарты, тесная коммуникация, никакого булшита</h2>
          </div>
       </div>
       <div class="standard-section">

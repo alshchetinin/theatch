@@ -7,7 +7,7 @@
          <div class="lead-service__wrapper">
 
             <div class="lead-service__factoid" style="background-image: linear-gradient(<?php the_field('gradient', $post_id) ?>);">
-               <div class="lead-service__number gigant-text">
+               <div class="lead-service__number font-gigant">
                   <?php the_field('number') ?>
                </div>
                <div class="lead-service__description">

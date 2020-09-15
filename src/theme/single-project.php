@@ -13,7 +13,7 @@ Template Post Type: project
    <div class="hero__overlay"></div>
    
       <div class="hero__content">
-         <h1 class="gigant-text"><?php the_title()?></h1>
+         <h1 class="font-gigant"><?php the_title()?></h1>
          <h3><?php the_excerpt()?></h3>
       </div>
       

@@ -24,6 +24,7 @@
       +size-md(12)
       p
          margin: 24px 0px
+         +font-text()
 
    &__picture
       +size(7)
@@ -49,17 +50,9 @@
       align-items: center
       @include md-block()
          margin-bottom: 0px
-      h4
-         font-weight: 600
-         font-size: 24px
-         line-height: 27px
-         font-family: $font-text
-         @include md-block()
-            font-weight: bold
-            font-size: 16px
-            line-height: 19px
    &__description
       margin-top: 20px
+      +font-text()
       @include md-block()
          display: none
    &__icon

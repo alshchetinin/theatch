@@ -8,22 +8,6 @@ $white: #ffffff
 $gray: #EDEDED
 $gradient: linear-gradient(90deg, #F857A6 0%, #FF5858 100%)
 
-$font-text: 'Avenir Next', sans-serif
-$font-headline: 'aeroport','Avenir Next', sans-serif
-$section-title: 90px/96% $font-headline  
-$super-text: bold 200px/85% $font-headline 
-$super-text__mobile: bold 72px/100% $font-headline
-$gigant-text: bold 70px/103% $font-headline 
-$gigant-text__mobile: bold 28px/123% $font-headline 
-$h1: bold 44px $font-headline
-$h1-mobile: 32px
-$h2: bold 32px/112% $font-headline
-$h3: bold 24px/132% $font-text 
-$h3-mobile: bold 18px/132% $font-text  
-$h4: bold 24px/100% $font-text  
-$text: normal 16px $font-text
-$small-text: 12px $font-text 
-
 =bigtext()
    font-family: $font-text
    font-size: 24px
@@ -43,3 +27,28 @@ $offset-block: 172px
 
    +md-block()
       margin-bottom: ($offset-block / 2)
+
+
+$font-text: 'Avenir Next', sans-serif
+$font-headline: 'aeroport','Avenir Next', sans-serif
+$section-title: 90px/96% $font-headline  
+$very-big-text: bold 200px/85% $font-headline 
+$very-big-text__mobile: bold 72px/100% $font-headline
+$font-gigant: bold 70px/103% $font-headline 
+$font-gigant__mobile: bold 28px/123% $font-headline 
+$h1: bold 44px $font-headline
+$h1-mobile: 32px
+$h2: bold 32px/112% $font-headline
+$h3: bold 24px/132% $font-text 
+$h3-mobile: bold 18px/132% $font-text  
+$h4: bold 24px/100% $font-text  
+$text: normal 16px $font-text
+$small-text: 12px $font-text 
+
+// .title-section
+//    h2
+//       +font-super-gigant()
+//       @include md-block
+//          font-size: 52px
+//       @include sm-block
+//          font-size: $h1-mobile

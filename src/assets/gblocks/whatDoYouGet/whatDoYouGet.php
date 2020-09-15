@@ -3,7 +3,7 @@
    <div class="what-do-you-get">
       <div class="what-do-you-get__header">
          <div class="what-do-you-get__title title-section ">
-               <h2><?php the_field('title')?></h2>
+               <h2 class="font-super-gigant"><?php the_field('title')?></h2>
          </div>
          <?php $post_id = get_the_ID()?>
          <div class="what-do-you-get__subtitle" style="background-image: linear-gradient(<?php the_field('gradient', $post_id )?>);">

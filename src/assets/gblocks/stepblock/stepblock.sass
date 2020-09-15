@@ -79,30 +79,18 @@
       @include md-block
          padding-left: 0px
    &__title
-      font-weight: bold;
-      font-size: 44px;
-      line-height: 102%;
-      font-family: $font-text
+      +font-h1()
       margin-bottom: 36px;
-      @include md-block
-         font: $h3-mobile
    &__description
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 33px;
-      font-family: $font-text
-      @include md-block         
-         font-size: 18px      
+      +font-h3()
    &__list
       ul 
          +row-flex()
          li
             +col()
             +u-size(2,6, 20px)
-            margin-bottom: 36px
-            font-size: 24px
-            line-height: 150%
+            +font-h3()
             @include md-block
                +u-size(2,4, 20px)
-               font-size: 18px
+               
 

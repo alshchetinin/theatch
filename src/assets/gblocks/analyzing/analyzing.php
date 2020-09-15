@@ -4,7 +4,7 @@
    <div class="row">
       <div class="analyzing">
          <div class="analyzing__headline">
-            <h2 class="gigant-text" ><?php the_field('headline')?></h2>
+            <h2 class="font-super-gigant" ><?php the_field('headline')?></h2>
          </div>
          <div class="analyzing__items">
 

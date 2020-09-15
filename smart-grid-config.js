@@ -18,7 +18,7 @@ var settings = {
          width: '1280px', /* -> @media (max-width: 1100px) */
       },
       md: {
-         width: '960px'
+         width: '1024px'
       },
       sm: {
          width: '780px',

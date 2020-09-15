@@ -2,7 +2,7 @@
    <div class="wrapper">
       <div class="main-blog">
          <div class="title-section title-section_blog">
-            <h2>Блог</h2>
+            <h2 class="font-super-gigant">Блог</h2>
          </div>
          <div class="main-blog__list">
             <div class="main-blog__set">

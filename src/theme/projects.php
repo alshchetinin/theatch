@@ -10,7 +10,7 @@ Template Post Type: page
    <div class="wrapper">
       <div class="row">
          <div class="page-title">
-            <h1 class="super-text"><?php the_title() ?></h1>
+            <h1 class="very-big-text"><?php the_title() ?></h1>
          </div>
       </div>
    </div>
@@ -33,7 +33,7 @@ Template Post Type: page
             
                <a href="<?php the_permalink() ?>"></a>
                <div class="project-item__content">
-                  <div class="project-item__title gigant-text">
+                  <div class="project-item__title font-gigant">
                      <?php the_title() ?>
                   </div>
                   <div class="project-item__description">

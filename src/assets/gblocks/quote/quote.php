@@ -4,7 +4,7 @@
       <div class="quote">
          <?php $post_id = get_the_ID()?>
          <div class="quote__text" >
-            <h2 class="gigant-text" style="background-image: linear-gradient(<?php the_field('gradient', $post_id )?>);">
+            <h2 class="font-gigant" style="background-image: linear-gradient(<?php the_field('gradient', $post_id )?>);">
             <span class="quote__mark">“</span>
             <br>
             <?php the_field('quote')?></h2>
