@@ -1,3 +1,4 @@
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <!-- begin lead-service -->
@@ -24,3 +25,4 @@
       <!-- end lead-service -->
    </div>
 </div>
+</section>

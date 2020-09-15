@@ -1,4 +1,4 @@
-<section id="main-slider">
+<section id="main-slider g-block">
    <div class="main-slider"  data-slick='{   "infinite": true, "easing": "ease-in-out", "autoplay": true, "autoplaySpeed": 4500, "speed": 2000, "arrows": false}'>
 
    <?php while( have_rows('slides') ): the_row(); 

@@ -1,4 +1,4 @@
-<section id="service-section">
+<section id="service-section" class="g-block">
    <div class="wrapper">
       <div class="service-section__title">
          <div class="title-section title-section_service">

@@ -11,6 +11,33 @@
       </div>
    </div>
 </section>
+
+<section class="testmagrin">
+   <div class="wrapper">
+      <div class="row">
+         <!-- begin testmagrin -->
+         <div class="">
+            <h2>fsdfsdf</h2>
+            <p>sadasdas</p>
+         </div>
+         <!-- end testmagrin -->
+      </div>
+   </div>
+</section>
+
+<section class="testmagrin">
+   <div class="wrapper">
+      <div class="row">
+         <!-- begin testmagrin -->
+         <div class="">
+            <h2>fsdfsdf</h2>
+            <p>sadasdas</p>
+         </div>
+         <!-- end testmagrin -->
+      </div>
+   </div>
+</section>
+
 	<div class="site-content page">
 	<?php the_post(); the_content();?>
 	</div>

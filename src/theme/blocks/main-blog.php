@@ -1,4 +1,4 @@
-<section id="main-blog">
+<section id="main-blog" class="g-block">
    <div class="wrapper">
       <div class="main-blog">
          <div class="title-section title-section_blog">
@@ -69,10 +69,6 @@
             <div class="notification__form">
                <div class="notification__wrapper">
                   <?php echo do_shortcode('[contact-form-7 id="14" title="subscription form"]')?>
-                  <div class="notification__success">
-                     🤟🏻
-                  </div>
-
                </div>
                <p class="notification__bottom">Получайте полезные статьи и свежие новости о диджитал-маркетинге </p>
             </div>

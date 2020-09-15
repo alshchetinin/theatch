@@ -5,7 +5,7 @@
 <?php echo get_template_part('/blocks/lead-section')?>
 <?php echo get_template_part('/blocks/service-section')?>
 
-<section id="headline-section">
+<section id="headline-section" class="g-block">
    <div class="wrapper">
       <div class="headline-section">
          <div class="headline-section__title">

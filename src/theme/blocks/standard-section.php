@@ -1,4 +1,4 @@
-<section id="standard">
+<section id="standard" class="g-block">
    <div class="wrapper">
       <div class="standard-section__title">
          <div class="title-section title-section_standard">

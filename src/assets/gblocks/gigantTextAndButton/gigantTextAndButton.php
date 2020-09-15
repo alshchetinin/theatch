@@ -1,3 +1,4 @@
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <div class="gigant-text-button">
@@ -9,3 +10,5 @@
       </div>
    </div>
 </div>
+
+</section>

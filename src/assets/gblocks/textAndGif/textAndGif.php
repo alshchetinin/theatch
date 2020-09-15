@@ -1,4 +1,5 @@
 <?php $post_id = get_the_ID()?>
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <div class="text-and-gif">
@@ -49,3 +50,5 @@
 
 </div>
 
+
+</section>

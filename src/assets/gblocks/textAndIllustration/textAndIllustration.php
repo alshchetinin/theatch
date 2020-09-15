@@ -1,4 +1,4 @@
-<section id="headline-section">
+<section id="headline-section" class="g-block">
    <div class="wrapper">
       <div class="headline-section">
          <div class="headline-section__title">

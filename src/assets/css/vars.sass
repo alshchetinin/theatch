@@ -36,10 +36,10 @@ $small-text: 12px $font-text
 $transition: cubic-bezier(0.65, 0, 0.35, 1)
 $fix100vh: 100vh
 
-$offset-block: 334px
+
+$offset-block: 172px
 =margin-block()
-   margin-bottom: ($offset-block / 2)
-   margin-top: ($offset-block / 2)
-   @media screen and (max-width: $break_md)
-      margin-bottom: ($offset-block / 4)
-      margin-top: ($offset-block / 4)
+   margin-bottom: $offset-block
+
+   +md-block()
+      margin-bottom: ($offset-block / 2)

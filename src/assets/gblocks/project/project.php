@@ -1,3 +1,4 @@
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <div class="title-section ">
@@ -26,3 +27,4 @@
       </div>
    </div>
 </div>
+</section>

@@ -1,3 +1,4 @@
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <div class="quote">
@@ -28,3 +29,4 @@
       </div>
    </div>
 </div>
+</section>

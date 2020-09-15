@@ -1,4 +1,4 @@
-<section id="lead-section">
+<section id="lead-section" class="g-block">
    <div class="wrapper">      
       <div class="lead">
          <div class="lead__title">

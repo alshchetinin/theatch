@@ -1,4 +1,4 @@
-<section id="main-slider">
+<section id="main-slider" class="g-block">
    <div class="main-slider"  data-slick='{   "infinite": true, "easing": "ease-in-out", "autoplay": true, "autoplaySpeed": 4500, "speed": 2000, "arrows": false}'>
       <div class="main-slider__item"
          style="background-image: url(<?php echo get_template_directory_uri()?>/img/bg.png)">

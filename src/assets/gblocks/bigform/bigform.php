@@ -1,3 +1,4 @@
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <!-- begin big-form -->
@@ -25,3 +26,4 @@
       <!-- end big-form -->
    </div>
 </div>
+</section>

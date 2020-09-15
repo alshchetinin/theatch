@@ -1,3 +1,5 @@
+<section class="g-block">
+
 <div class="wrapper">
    <div class="row">
       <div class="analyzing">
@@ -53,3 +55,4 @@
       </div>
    </div>
 </div>
+</section>

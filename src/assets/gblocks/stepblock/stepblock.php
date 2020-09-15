@@ -1,4 +1,4 @@
-<section class="step">
+<section class="step g-block">
    <div class="wrapper">
          <div class="title-section">
             <h2><?php the_field('zagolovok_bloka',)?> </h2>

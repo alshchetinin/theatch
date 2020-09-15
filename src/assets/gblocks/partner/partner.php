@@ -1,3 +1,4 @@
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <div class="partner">
@@ -23,3 +24,4 @@
       </div>
    </div>
 </div>
+</section>

@@ -1,4 +1,4 @@
-<section id="notification">
+<section id="notification" class="g-block">
    <div class="wrapper">
       <div class="notification-inner">
          <div class="notification">

@@ -1,3 +1,4 @@
+<section class="g-block">
 <div class="wrapper">
    <div class="what-do-you-get">
       <div class="what-do-you-get__header">
@@ -47,3 +48,4 @@
 
    </div>
 </div>
+</section>

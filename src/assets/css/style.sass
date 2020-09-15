@@ -90,10 +90,12 @@ a
 .open-popup
    overflow-y: hidden
 
+.header,
+   margin: $offset-block / 4 0px
+
 .home .header, .page-template-page-service .header, .single-project .header, .services-template-page-service .header
    position: absolute
-   top: 0
-   margin: 40px 0px
+   top: 0   
    z-index: 9999
    width: 100%
    @include sm-block()
@@ -104,8 +106,7 @@ a
       font-family: $font-headline
       font-size: 100px
       line-height: 96%
-      font-weight: bold
-      margin: 1rem 0
+      font-weight: bold      
       @include md-block
          font-size: 52px
       @include sm-block
@@ -306,11 +307,15 @@ footer
                padding: 4px 0px
 
 .g-block
-   +margin-block()
-   display: block
+   +margin-block()   
    
 .page-title
-   margin: 80px 0px   
+   margin: $offset-block 0px
+
+
+.testmagrin
+   +margin-block()   
+
 @import './blocks/naviagtion'
 @import './blocks/main-slider'
 @import './blocks/lead-section'

@@ -4,14 +4,13 @@
 @import '../../css/helpers/normalize'
 @import '../../css/helpers/lib'
 
-.step
-   +margin-block()
+.step   
    .title-section
       margin-bottom: 80px
       +row-flex()
       h2
          +col()
-         +size(7)
+         +size(8)
          +size-xl(12)
          +shift-left(1)
          +shift-xl-left(0)
@@ -30,6 +29,8 @@
    +shift-xl-left(0)
    &:last-of-type .step-item__line
       display: none
+   &:last-of-type
+      padding-bottom: 0px   
    &:not(:first-of-type) .step-item__number
       background: #000
       span

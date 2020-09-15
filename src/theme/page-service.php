@@ -74,6 +74,7 @@ Template Post Type: page, services
    the_content(); ?>
 </div>
 
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <div class="partner">
@@ -99,7 +100,9 @@ Template Post Type: page, services
       </div>
    </div>
 </div>
+</section>
 
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <div class="quote">
@@ -130,7 +133,9 @@ Template Post Type: page, services
       </div>
    </div>
 </div>
+</section>
 
+<section class="g-block">
 <div class="wrapper">
    <div class="row">
       <!-- begin big-form -->
@@ -158,8 +163,10 @@ Template Post Type: page, services
       <!-- end big-form -->
    </div>
 </div>
+</section>
 
-<section class="more-service">
+
+<section class="more-service g-block">
    <div class="wrapper">
       <div class="row">
          <div class="title-section">
