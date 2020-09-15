@@ -142,7 +142,7 @@ function devServer() {
 			});
 		}
 	);
-	watch('./src/assets/gblocks/**/*.sass', guttenbergBlocksDev, Reload);
+	watch('./src/assets/**/**/*.sass', stylesDev, Reload);
 	watch('./src/assets/gblocks/**/*.php',guttenbergBlocksDevPhp, Reload);
 	watch('./src/assets/gblocks/**/*.js',guttenbergBlocksDevJS, Reload);
 	watch('./src/assets/css/**/*.sass', stylesDev, Reload);
@@ -244,6 +244,7 @@ function guttenbergBlocksDev() {
 		.pipe(browserSync.stream({ match: "**/*.css" }));
 		
 		}
+		
 
 function guttenbergBlocksDevPhp() {
 	return src("./src/assets/gblocks/**/*.php").pipe(dest("./build/wordpress/wp-content/themes/" + themeName + "/gblocks"))
@@ -293,11 +294,9 @@ exports.dev = series(
 	copyImagesDev,
 	copyFontsDev,
 	stylesDev,
-	stylesEditorDev,
-	stylesBlocksDev,
+	stylesEditorDev,	
 	headerScriptsDev,
-	footerScriptsDev,
-	guttenbergBlocksDev,
+	footerScriptsDev,	
 	guttenbergBlocksDevPhp,
 	guttenbergBlocksDevJS,
 	pluginsDev,

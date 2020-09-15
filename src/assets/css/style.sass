@@ -24,7 +24,7 @@
 
 
 @mixin font-super-gigant
-   font-size: 100px
+   font-size: 90px
    font-family: $font-headline
    font-weight: bold
    line-height: 0.96
@@ -33,7 +33,7 @@
    +md-block()
       font-size: 60px   
    +sm-block()
-      font-size: 28px         
+      font-size: 32px         
 
 @mixin font-gigant
    font-size: 70px
@@ -52,18 +52,35 @@
    font-family: $font-headline
    font-weight: bold
    line-height: 1.157
-
+   +xl-block()
+      font-size: 34px
+   +md-block()
+      font-size: 34px   
+   +sm-block()
+      font-size: 20px
 @mixin font-h2
    font-size: 32px
    font-family: $font-headline
    font-weight: bold
    line-height: 1.124
+   +xl-block()
+      font-size: 28px
+   +md-block()
+      font-size: 24px   
+   +sm-block()
+      font-size: 18px   
 
 @mixin font-h3
    font-size: 24px
    font-family: $font-text
    font-weight: 600
    line-height: 1.5
+   +xl-block()
+      font-size: 20px
+   +md-block()
+      font-size: 18px   
+   +sm-block()
+      font-size: 16px      
 
 @mixin font-h4
    font-size: 20px
@@ -86,12 +103,16 @@
    font-family: $font-text
    font-weight: 600
    line-height: 1.3
+   +md-block()
+      font-size: 18px
 
 @mixin font-text
    font-size: 16px
    font-family: $font-text
    font-weight: normal
    line-height: 1.4
+   +md-block()
+      font-size: 14px
 
 @mixin font-small-text
    font-size: 12px
@@ -438,5 +459,20 @@ footer
 @import 'page-service'
 @import 'single-project'
 @import 'page-project'
+@import '../gblocks/analyzing/analyzing'
+@import '../gblocks/bigform/bigform'
+@import '../gblocks/gigantTextAndButton/gigantTextAndButton'
+@import '../gblocks/headlineDescription/headlineDescription'
+@import '../gblocks/headlineDescriptionImage/headlineDescriptionImage'
+@import '../gblocks/leadProject/leadProject'
+@import '../gblocks/leadService/leadService'
+@import '../gblocks/partner/partner'
+@import '../gblocks/project/project'
+@import '../gblocks/quote/quote'
+@import '../gblocks/stepblock/stepblock'
+@import '../gblocks/textAndGif/textAndGif'
+@import '../gblocks/videoBlock/videoBlock'
+@import '../gblocks/whatDoYouGet/whatDoYouGet'
+@import '../gblocks/checkandlist/checkandlist'
 
 

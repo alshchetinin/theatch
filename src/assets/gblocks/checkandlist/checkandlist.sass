@@ -1,0 +1,31 @@
+.list-check
+	+col()
+	+size(6)
+	+size-xl(12)
+	+shift-left(2)
+	+shift-xl-left(0)
+	&__title
+		margin-bottom: $offset-block / 2
+	&__items
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-column-gap: 20px
+		grid-row-gap: 60px
+		+xl-block()
+			grid-template-columns: 1fr 1fr 1fr 1fr
+		+md-block()
+			grid-template-columns: 1fr	
+.list-item
+	position: relative
+	&__title
+		+font-h2()
+		margin-bottom: 24px
+		+md-block()
+			margin-bottom: 12px
+	&__text
+		+font-text()
+		padding-right: 30px
+	&__icon
+		img
+			+md-block()
+				width: 36px

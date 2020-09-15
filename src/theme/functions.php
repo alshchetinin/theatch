@@ -66,8 +66,7 @@ function textAndIllustration() {
 		 acf_register_block_type(array(
 			  'name'              => 'textAndIllustration',
 			  'title'             => __('Текст и илюстрация'),
-			  'description'       => __('Обычно выводится только в ипотеке. Содержит заголовок, текст, кнопку'),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/textAndIllustration/textAndIllustration.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/textAndIllustration/textAndIllustration.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -87,8 +86,7 @@ function mainSlider() {
 		 acf_register_block_type(array(
 			  'name'              => 'main-slider',
 			  'title'             => __('Большой слайдер'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/main-slider/main-slider.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/main-slider/main-slider.php',
 			  'enqueue_script'     => get_template_directory_uri() . '/gblocks/main-slider/main-slider.js',
 			  'category'          => 'common',
@@ -109,8 +107,7 @@ function stepblock() {
 		 acf_register_block_type(array(
 			  'name'              => 'stepblock',
 			  'title'             => __('Шаги'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/stepblock/stepblock.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/stepblock/stepblock.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -132,8 +129,7 @@ function whatDoYouGet() {
 		 acf_register_block_type(array(
 			  'name'              => 'whatDoYouGet',
 			  'title'             => __('Что вы получите'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/whatdoyouget/whatDoYouGet.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/whatdoyouget/whatDoYouGet.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -154,8 +150,7 @@ function textAndGif() {
 		 acf_register_block_type(array(
 			  'name'              => 'textAndGif',
 			  'title'             => __('Текст и гифка'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/textAndGif/textAndGif.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/textAndGif/textAndGif.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -177,8 +172,7 @@ function gigantTextAndButton() {
 		 acf_register_block_type(array(
 			  'name'              => 'gigantTextAndButton',
 			  'title'             => __('Большой текст и кнопка'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/gigantTextAndButton/gigantTextAndButton.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/gigantTextAndButton/gigantTextAndButton.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -199,8 +193,7 @@ function analyzing() {
 		 acf_register_block_type(array(
 			  'name'              => 'analyzing',
 			  'title'             => __('Блок «Что анализируем»'),
-			  'description'       => __('Можно использовать если нужно показать два заголовка и картинку'),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/analyzing/analyzing.css',
+			  'description'       => __('Можно использовать если нужно показать два заголовка и картинку'),			  
 			  'render_template'   => '/gblocks/analyzing/analyzing.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -221,8 +214,7 @@ function partner() {
 		 acf_register_block_type(array(
 			  'name'              => 'partner',
 			  'title'             => __('Блок «Чам доверяют»'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/partner/partner.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/partner/partner.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -242,8 +234,7 @@ function quote() {
 		 acf_register_block_type(array(
 			  'name'              => 'quote',
 			  'title'             => __('Блок «Цитата»'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/quote/quote.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/quote/quote.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -263,8 +254,7 @@ function bigform() {
 		 acf_register_block_type(array(
 			  'name'              => 'bigform',
 			  'title'             => __('Блок «Большая форма»'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/bigform/bigform.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/bigform/bigform.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -285,8 +275,7 @@ function leadProject() {
 		 acf_register_block_type(array(
 			  'name'              => 'leadProject',
 			  'title'             => __('Блок «Лид текст для проектов»'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/leadProject/leadProject.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/leadProject/leadProject.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -306,8 +295,7 @@ function videoBlock() {
 		 acf_register_block_type(array(
 			  'name'              => 'videoBlock',
 			  'title'             => __('Блок «Видео»'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/videoBlock/videoBlock.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/videoBlock/videoBlock.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -327,8 +315,7 @@ function headlineDescription() {
 		 acf_register_block_type(array(
 			  'name'              => 'headlineDescription',
 			  'title'             => __('Блок «Заголовок и описание»'),
-			  'description'       => __('С большим текстом'),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/headlineDescription/headlineDescription.css',
+			  'description'       => __('С большим текстом'),			  
 			  'render_template'   => '/gblocks/headlineDescription/headlineDescription.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -348,8 +335,7 @@ function headlineDescriptionImage() {
 		 acf_register_block_type(array(
 			  'name'              => 'headlineDescriptionImage',
 			  'title'             => __('Блок «Заголовок, описание и картинка»'),
-			  'description'       => __('С большим текстом'),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/headlineDescriptionImage/headlineDescriptionImage.css',
+			  'description'       => __('С большим текстом'),			  
 			  'render_template'   => '/gblocks/headlineDescriptionImage/headlineDescriptionImage.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -369,8 +355,7 @@ function leadService() {
 		 acf_register_block_type(array(
 			  'name'              => 'leadService',
 			  'title'             => __('Блок «Лид блок для услуг»'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/leadService/leadService.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/leadService/leadService.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
@@ -390,9 +375,28 @@ function project() {
 		 acf_register_block_type(array(
 			  'name'              => 'project',
 			  'title'             => __('Блок «Выбор кейсов»'),
-			  'description'       => __(''),
-			  'enqueue_style'     => get_template_directory_uri() . '/gblocks/project/project.css',
+			  'description'       => __(''),			  
 			  'render_template'   => '/gblocks/project/project.php',
+			  'category'          => 'common',
+			  'mode' => 'Preview',
+			  'icon'			=> 'admin-users',
+			  'mode'			=> 'edit'
+		 ));
+	}
+}
+
+add_action( 'acf/init', 'checkandlist' );
+function checkandlist() {
+ 
+	// Проверяем, что функция доступна.
+	if( function_exists( 'acf_register_block_type' ) ) {
+
+		 // Регистрируем блок рекомендаций.
+		 acf_register_block_type(array(
+			  'name'              => 'checkandlist',
+			  'title'             => __('Блок «Список с галочкой»'),
+			  'description'       => __(''),			  
+			  'render_template'   => '/gblocks/checkandlist/checkandlist.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
 			  'icon'			=> 'admin-users',
