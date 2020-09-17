@@ -58,7 +58,7 @@ $(document).ready(function () {
 
    var scene1 = new ScrollMagic.Scene({
       triggerElement: ".page-service-content", 
-      duration: $('.page-service-content').innerHeight()-100,
+      duration: $('.page-service-content').innerHeight()-$('.card-form').innerHeight(),
       triggerHook: 0.05
    })
    .setPin(".sticky-form")
