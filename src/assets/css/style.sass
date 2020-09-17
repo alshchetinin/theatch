@@ -137,7 +137,7 @@
 .very-big-text
    font: $very-big-text
    @include md-block
-      font: $very-big-text__mobile   
+      font: $very-big-text__mobile            
 
 .font-super-gigant
    +font-super-gigant()
@@ -411,9 +411,10 @@ a
 .vertical-form      
    .wpcf7-form      
       p
-         flex-direction: column         
+         flex-direction: column
       input:not([type="submit"])
          width: calc( 100% - 14px  )
+         margin-bottom: 12px
 
 footer
    margin: 24px 0px
@@ -444,7 +445,28 @@ footer
    +margin-block()   
    
 .page-title
-   margin: $offset-block 0px
+   margin-top: $offset-block / 2 
+   margin-bottom: $offset-block / 2 
+   +col()
+   +size(12)
+   +md-block()
+       margin-top: 44px
+       margin-bottom: 44px
+
+.map
+   +col()
+   +size(12)
+   height: 550px
+   border-radius: 10px   
+   margin-bottom: 48px
+   outline: none
+
+.contact-item
+   +col()
+   +size(4)
+   +size-md(12)
+   +font-h2()
+   margin-bottom: 38px
 
 
 @import './blocks/naviagtion'

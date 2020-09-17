@@ -70,8 +70,7 @@ Template Post Type: page, services
 
    </section>
 
-   <?php the_post();
-   the_content(); ?>
+   <?php the_post(); the_content(); ?>
 </div>
 
 <section class="g-block">
@@ -177,6 +176,8 @@ Template Post Type: page, services
          <?php $args = array(
             'post_type' => 'services',
             'posts_per_page' => 6,
+            'orderby' => 'date',
+            'order' => 'ASC',
          );
          $property = new WP_Query($args); // дальше - loop
          if ($property->have_posts()) : ?>

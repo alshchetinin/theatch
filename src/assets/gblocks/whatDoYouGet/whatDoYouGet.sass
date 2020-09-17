@@ -17,6 +17,9 @@
       -webkit-text-fill-color: transparent
       -webkit-background-clip: text
       margin-bottom: 12px
+      +md-block()
+         font-size: 24px
+         line-height: 32px
    &__description
       +font-h3()
    &__bottom
@@ -29,6 +32,8 @@
       +row-flex()
    &__item
       margin-bottom: 72px
+      +md-block()
+         margin-bottom: 52px
       &_2
          +col()
          +u-size(3,6, 20px)
@@ -39,7 +44,9 @@
          +size-md(12)
       h3 
          +font-h2()
-         margin-bottom: 24px        
+         margin-bottom: 24px   
+         +md-block()
+            margin-bottom: 12px     
    &__text
       +font-text()
       color: #A3A3A3;    
