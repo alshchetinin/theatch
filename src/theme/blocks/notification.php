@@ -5,8 +5,7 @@
             <div class="notification__picture">
                <img src="<?php echo get_template_directory_uri() ?>/img/avatar.png" alt="">
                <div class="notification__title">
-                  Рассказываем про топ 10 решиний, которые помогут поднять конверсию сайта
-                  на 15% от текущей
+               Рассказываем, как получать долю кликов в 23,5% от всего трафика 
                </div>
             </div>
 

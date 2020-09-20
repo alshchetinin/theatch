@@ -203,8 +203,7 @@ body
 
 p
    font-family: $font-text
-a
-   font: $text
+a   
    color: $white
    text-decoration: none
    transition: all .2s $transition
@@ -300,7 +299,7 @@ a
       height: 48px
       padding-left: 14px;      
       color: #ffffff;
-      
+      width: calc( 100% - 14px )
       //max-width: 100%;      
       color: $white
       &::placeholder
@@ -335,6 +334,44 @@ a
          margin: 1rem 0
       &:hover
          background: $architect-red
+   textarea
+      background: #212121
+      border-top-left-radius: 10px
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+      border-top-right-radius: 10px      
+      border: none
+      outline: none      
+      padding-left: 14px;     
+      padding-top: 12px 
+      color: #ffffff;      
+      resize: none
+      width: calc( 100% - 14px )     
+      &::placeholder
+            font: $text
+            color: #BDBDBD         
+            @include sm-block
+               color: #4F4F4F 
+   input[type="file"]
+      padding-left: 0px                    
+   .custom-file-field 
+      position: relative
+      border: 2px dashed #FFFFFF
+      border-radius: 10px
+      display: flex
+      align-items: center
+      justify-content: center     
+      widows: 100%   
+      span
+         opacity: 0
+         position: absolute
+         width: 100%
+         height: 100%
+         top: 0      
+      &_done
+         border: 2px dashed #2D9D84
+         color: #2D9D84
+
    .ajax-loader
       display: none !important
    .wpcf7-validation-errors
@@ -416,6 +453,18 @@ a
          width: calc( 100% - 14px  )
          margin-bottom: 12px
 
+.two-flied
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-column-gap: 20px  
+   +md-block()
+      grid-template-columns: 1fr 
+      .custom-file-field
+         padding: 20px  
+   label, span
+      display: block
+      margin-bottom: 20px
+
 footer
    margin: 24px 0px
 .footer
@@ -440,6 +489,37 @@ footer
                color: $architect-black
                display: block
                padding: 4px 0px
+               
+.services-template .footer-form   
+   display: none
+.footer-form   
+   +col()
+   +size(12)
+   background: $architect-black
+   border-radius: 10px
+   padding: 60px 0px
+   margin-bottom: $offset-block / 4
+   +xl-block()
+      padding: 60px 60px
+   &__content
+      +row-flex()
+      align-items: center
+   &__text
+      +col()
+      +size(3)      
+      +shift-left(2)
+      +size-xl(12)
+      +shift-xl-left(0)
+      margin-bottom: 32px
+      h3
+         margin-bottom: 32px
+   &__form
+      +col()
+      +size(4)          
+      +size-xl(12)  
+      +shift-left(1)
+      +shift-xl-left(0)
+
 
 .g-block
    +margin-block()   
@@ -468,7 +548,63 @@ footer
    +font-h2()
    margin-bottom: 38px
 
+.text-service
+   +col()
+   +size(10)
+   +size-xl(12)
+   +shift-left(1)
+   +shift-xl-left(0)
+   h2
+      margin-bottom: 82px
+      +md-block()
+         margin-bottom: 32px
+   &__wrap
+         display: flex
+         justify-content: space-between
+         +md-block()
+            flex-direction: column
+         li
+            margin-bottom: 24px
+            +md-block()
+               margin-bottom: 12px
+            a
+               -webkit-text-fill-color: transparent
+               -webkit-background-clip: text               
+      
+.main-page-service
+   .col
+      +xl-block()
+         +u-size(2,10,20px)
+      +col()
+      +size(2)   
+      +size-md(6) 
+      +size-sm(12)   
+      display: flex
+      +md-block()
+         margin-bottom: 24px
 
+.page-description
+   margin-bottom: 32px   
+   +col()
+   +size(12)
+   +size-xl(12)
+   +shift-left(0)
+   +shift-xl-left(0)
+
+.main-partner
+   h2
+      +col()
+      +size(7)
+      +size-xl(12)
+      +shift-left(1)
+      +shift-xl-left(0)
+      margin-bottom: 52px
+
+.lt-animation   
+   display: flex
+   justify-content: center
+   align-items: center
+   width: 100%
 @import './blocks/naviagtion'
 @import './blocks/main-slider'
 @import './blocks/lead-section'
@@ -496,5 +632,6 @@ footer
 @import '../gblocks/videoBlock/videoBlock'
 @import '../gblocks/whatDoYouGet/whatDoYouGet'
 @import '../gblocks/checkandlist/checkandlist'
+@import 'multiselect';
 
 

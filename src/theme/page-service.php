@@ -12,7 +12,7 @@ Template Post Type: page, services
          <div class="service-header__row">
             <div class="service-header__content">
                <h1 class="very-big-text"><?php the_title() ?></h1>
-               <p class="font-gigant">Анализируем интернет-маркетинг девелопера и составляем рекомендации по увеличению конверсии и снижению стоимости заявки</p>
+               <p class="font-gigant"><?php echo get_the_excerpt(); ?></p>
                <div class="service-header-form">
                   <div class="service-header-form__photo">
                      <img src="<?php the_field('form_picture') ?>" alt="" class="img-responsive">
@@ -36,7 +36,7 @@ Template Post Type: page, services
 </section>
 
 
-<div class="site-content page-service-content">
+<div class="site-content page-service-content  g-block"">
    <section class="sticky-form">
       <div class="wrapper">
          <div class="row">
@@ -218,4 +218,23 @@ Template Post Type: page, services
       </div>
    </div>
 </section>
+
+<!-- <script>
+
+   $(function () {
+      var heightForm = $('.sticky-form').innerHeight()*2;
+      var heightContainer = $('.page-service-content').outerHeight(true);
+      var controller = new ScrollMagic.Controller();
+      var scene1 = new ScrollMagic.Scene({
+      triggerElement: ".page-service-content", 
+      duration: heightContainer - heightForm, 
+      triggerHook: 0.05
+   })
+   .setPin(".sticky-form", {pushFollowers: false})
+   .addIndicators({name: "1 (duration:)"+ $('.page-service-content').innerHeight()-$('.card-form').innerHeight()}) // add indicators (requires plugin)
+   .addTo(controller);
+      
+   });
+
+</script> -->
 <?php get_footer(); ?>

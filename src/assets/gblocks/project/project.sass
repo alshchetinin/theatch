@@ -1,0 +1,47 @@
+.sevice-projects-title
+   +col()
+   +size(8)
+   +shift-left(1)
+   +size-xl(12)
+   +shift-xl-left(0)
+   margin-bottom: $offset-block / 2
+
+.sevice-projects
+   +col()
+   +size(8)
+   +shift-left(1)
+   +size-xl(12)
+   +shift-xl-left(0)
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-column-gap: 20px
+   grid-row-gap: 20px
+.sevice-project
+   height: 300px
+   display: flex
+   align-items: center
+   justify-content: center
+   background-position: center center
+   background-size: cover
+   background-repeat: no-repeat
+   position: relative
+   border-radius: 10px
+   transition: all 0.3s $transition
+   &:hover
+      transform: translateY(-3px)
+   a
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      z-index: 2
+   &__overlay
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: #000
+      opacity: 0.5
+      top: 0
+   &__title
+      z-index: 1    
+      text-align: center 

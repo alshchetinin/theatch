@@ -21,14 +21,6 @@
    +size-xl(12)
    +shift-left(1)
    +shift-xl-left(0)
-   &:last-of-type .step-item__line
-      display: none
-   &:last-of-type
-      padding-bottom: 0px   
-   &:not(:first-of-type) .step-item__number
-      background: #000
-      span
-         color: $white
    @include md-block
       padding-bottom: 70px         
    &__line
@@ -36,40 +28,41 @@
       top: 0px
       width: 2px
       height: 100%
-      background: $gray
+      background: $architect-black
       left: 49px
       z-index: -1
       @include md-block
          display: none
    &__content
-      display: flex      
+      +row-flex() 
       @include md-block
          flex-direction: column
    &__number
-      display: flex
-      width: 96px
-      height: 96px
-      background: $gray
-      border: 2px solid $gray
-      border-radius: 100%
-      justify-content: center
-      align-items: center
-      flex-basic: 96px
-      flex-shrink: 0
-      @include md-block
-         width: 36px
-         height: 36px
-         margin-bottom: 16px
+      +col()
+      +u-size(1,7, 20px)
       span
          font-weight: 500;
+         display: flex
          font-size: 56px;
          line-height: 56px;
          color: #000000;
+         align-items: center
+         justify-content: center
+         width: 96px
+         height: 96px
+         background: $architect-black
+         border: 2px solid $architect-black
+         border-radius: 100%
          @include md-block
             font-size: 24px
             line-height: 24px
+            width: 36px
+            height: 36px
+            margin-bottom: 16px
    &__text
-      padding-left: 40px
+      +col()
+      +u-size(6,7, 20px)
+      +size-md(12)
       @include md-block
          padding-left: 0px
    &__title
@@ -86,7 +79,16 @@
             +col()
             +u-size(2,6, 20px)
             +font-h3()
+            margin-bottom: 32px
             @include md-block
                +u-size(2,4, 20px)
                
-
+   &:last-of-type .step-item__line
+      display: none
+   &:last-of-type
+      padding-bottom: 0px   
+   &:not(:first-of-type) .step-item__number
+      
+      span
+         color: $architect-black  
+         background: #000000             

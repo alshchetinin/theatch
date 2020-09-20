@@ -6,16 +6,25 @@
       background-repeat: no-repeat
       background-size: cover
       background-position: center center
-      &:hover
-         .main-slider__arrow
-            transform: translateX(15px)
-
+      position: relative
+      a
+         position: absolute
+         height: 100%
+         width: 100%
+         top: 0
+   &__overlay
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: #000
+      opacity: 0.5
+      top: 0         
    &__wrapper
       +wrapper()
       height: $fix100vh
       display: flex
       flex-direction: column-reverse
-
+      position: relative
       @include sm-block()
          justify-content: center
    &__content

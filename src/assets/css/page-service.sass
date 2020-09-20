@@ -130,19 +130,23 @@
    position: relative
 .sticky-form
    position: absolute
-   top: 20px
+   height: 100%
    width: 100%
+   top: 0
    pointer-events: none
    +xl-block()
       display: none
    .wrapper
-
+      height: 100%
       .row
          justify-content: flex-end
+         height: 100%
 
 
 .card-form
    pointer-events: auto
+   position: sticky
+   top: 70px
    +col()
    +size(3)
    padding: 60px 48px
@@ -150,6 +154,7 @@
    border-radius: 10px
    display: flex
    flex-direction: column
+   height: fit-content
    &__title
       +font-h2()
    &__persone

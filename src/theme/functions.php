@@ -5,7 +5,11 @@ function wordpressify_resources() {
 	wp_enqueue_script( 'header_js', get_template_directory_uri() . '/js/header-bundle.js', null, 1.0, false );
 	wp_enqueue_script( 'footer_js', get_template_directory_uri() . '/js/footer-bundle.js', null, 1.0, true );
 }
+@ini_set( 'upload_max_size' , '150M' );
+@ini_set( 'post_max_size', '150M');
+@ini_set( 'max_execution_time', '300' );
 
+add_post_type_support( 'page', 'excerpt' );
 add_action( 'wp_enqueue_scripts', 'wordpressify_resources' );
 
 register_nav_menus(array(

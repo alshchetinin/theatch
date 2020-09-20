@@ -1,20 +1,6 @@
 $(document).ready(function () {
-   const controller = new ScrollMagic.Controller();
-   const scrollDuration = 3 * $('.main-project-list-item').height();
-   const transformXimg = 3 * $('.main-project-container__img').width();
-   const tween = gsap.to(".main-project-container__set", { x: -transformXimg, ease: "linear" });
-   const scene = new ScrollMagic.Scene({
-      triggerElement: "#main-project",
-      triggerHook: "onLeave",
-      duration: scrollDuration,
-   })
-      .setTween(tween)
-      .setPin(".main-project-container", { pushfollowers: true })
-      // .addIndicators({ name: `2 (duration: ${scrollDuration})` })
-      .addTo(controller);
-
-
-   const onSlideToggleTitle = () => {
+   
+   var onSlideToggleTitle = () => {
       $('.standard-section-slide-toogle').click(function (e) {
          e.preventDefault();
          $(this).find('.standard-section-slide-toogle__icon').toggleClass('standard-section-slide-toogle__icon_close');
@@ -48,7 +34,7 @@ $(document).ready(function () {
    });
 
    //Фикс высоты экрана
-   const appHeight = () =>
+   var appHeight = () =>
       document.documentElement.style.setProperty(
          "--app-height",
          `${window.innerHeight}px`
@@ -56,14 +42,12 @@ $(document).ready(function () {
    //window.addEventListener("resize", appHeight);
    appHeight();
 
-   var scene1 = new ScrollMagic.Scene({
-      triggerElement: ".page-service-content", 
-      duration: $('.page-service-content').innerHeight()-$('.card-form').innerHeight(),
-      triggerHook: 0.05
-   })
-   .setPin(".sticky-form")
-   //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-   .addTo(controller);
+
+   $('input[type="file"]').change(function(){
+      var value = $("input[type='file']").val();
+      $('.custom-file-field__text').text('Файл загружен');
+      $('.custom-file-field').addClass('custom-file-field_done')
+  });   
    
 });
 
