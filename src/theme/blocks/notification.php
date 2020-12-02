@@ -5,7 +5,7 @@
             <div class="notification__picture">
                <img src="<?php echo get_template_directory_uri() ?>/img/avatar.png" alt="">
                <div class="notification__title">
-               Рассказываем, как получать долю кликов в 23,5% от всего трафика 
+               Рассказываем, как обогнать конкурентов и&nbsp;получить большую долю кликов от&nbsp;всего трафика 
                </div>
             </div>
 
@@ -14,7 +14,7 @@
                   <?php echo do_shortcode('[contact-form-7 id="14" title="subscription form"]') ?>
 
                </div>
-               <p class="notification__bottom">Получайте полезные статьи и свежие новости о диджитал-маркетинге </p>
+               <p class="notification__bottom">Нажимая на кнопку, я соглашаюсь с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a></p>
             </div>
             <script>
                document.addEventListener('wpcf7mailsent', function(event) {

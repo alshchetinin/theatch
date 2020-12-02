@@ -3,8 +3,8 @@
          <div class="title-section">
             <h2 class="font-super-gigant"><?php the_field('zagolovok_bloka',)?> </h2>
          </div>
-
-      <div class="step-wrapper">
+         <?php $post_id = get_the_ID()?>
+      <div class="step-wrapper" style="--gradient: linear-gradient(<?php the_field('gradient', $post_id) ?>)" >
 
       
       <?php while( have_rows('steps',) ): the_row(); 
@@ -13,7 +13,8 @@
 				$hedline = get_sub_field('zagolovok');
             $text = get_sub_field('text');            
 				?>
-      <div class="step-item">
+      <div class="step-item" >
+            <div class="step-item__line-animation"></div>
             <div class="step-item__line"></div>
             
             <div class="step-item__content">

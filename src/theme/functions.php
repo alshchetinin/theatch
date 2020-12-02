@@ -135,7 +135,7 @@ function whatDoYouGet() {
 			  'name'              => 'whatDoYouGet',
 			  'title'             => __('Что вы получите'),
 			  'description'       => __(''),			  
-			  'render_template'   => '/gblocks/whatdoyouget/whatDoYouGet.php',
+			  'render_template'   => '/gblocks/whatDoYouGet/whatDoYouGet.php',
 			  'category'          => 'common',
 			  'mode' => 'Preview',
 			  'icon'			=> 'admin-users',

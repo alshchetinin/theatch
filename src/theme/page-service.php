@@ -61,7 +61,7 @@ Template Post Type: page, services
 
                <div class="vertical-form">
                <?php echo do_shortcode(get_field('sticky-form')) ?>
-               <small>Нажимая на кнопку, я соглашаюсь с политикой конфиденциальности</small>
+               <p class="font-small-text">Нажимая на кнопку, я соглашаюсь с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a></p>
             </div>   
             </div>
             
@@ -144,7 +144,7 @@ Template Post Type: page, services
          </div>
          <div class="big-form__form form">
          <?php echo do_shortcode(get_field('big-form')) ?>
-            <p>Нажимая на кнопку, я соглашаюсь с политикой конфиденциальности</p>
+            <p class="font-small-text">Нажимая на кнопку, я соглашаюсь с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a></p>
          </div>
          <div class="big-form__persone">
             <div class="big-form__picture">
@@ -185,7 +185,7 @@ Template Post Type: page, services
                $property->the_post(); ?>
                <div class="col">
                   <!-- begin servict-item -->
-                  <div class="servict-item">
+                  <div class="servict-item" style="--gradient: linear-gradient(<?php the_field('gradient') ?>)">
                      <a href="<?php the_permalink() ?>"></a>
                      <div class="servict-item__top">
 

@@ -8,7 +8,7 @@
          </div>
          <div class="big-form__form form">
             <?php the_field('form') ?>
-            <p>Нажимая на кнопку, я соглашаюсь с политикой конфиденциальности</p>
+            <p>Нажимая на кнопку, я соглашаюсь с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a> </p>
          </div>
          <div class="big-form__persone">
             <div class="big-form__picture">

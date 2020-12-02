@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <?php echo get_template_part('/blocks/main-slider') ?>
 <?php echo get_template_part('/blocks/lead-section') ?>
 <?php echo get_template_part('/blocks/service-section') ?>
@@ -10,7 +9,7 @@
       <div class="headline-section">
          <div class="headline-section__title">
             <h2 class="font-super-gigant">
-            Создаем решения ближе к пользователям. Помогаем застройщикам говорить с аудиторией на одном языке 
+            <?php the_field('title-text-and-ilustration', 'option')?>
             </h2>
 
          </div>
@@ -33,14 +32,14 @@
          <h2 class="font-super-gigant">Всегда рады поработать вместе</h2>
       </div>
          <div class="row">
-         <div class="partner">
+         <div class="partner partner_main">
             <div class="partner__logos">
 
             <?php while( have_rows('blok_nam_doveryayut', 'option') ): the_row(); 
                // переменные
                $logo = get_sub_field('logo');
                ?>
-               <div class="partner-logo">
+               <div class="partner-logo partner-logo_main">
                   <img class="img-responsive" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
                </div>            
       
@@ -62,7 +61,7 @@
       <div class="row">
          <!-- begin text-service -->
          <div class="text-service">
-            <h2 class="font-super-gigant">Работаем с компаниями, которые разделяют наши ценности. Помогаем им меняться, адаптироваться и оставаться на шаг впереди</h2>
+            <h2 class="font-super-gigant"><?php the_field('title-block-gradient', 'option')?></h2>
 
             <ul class="text-service__wrap">
                <?php $args = array(

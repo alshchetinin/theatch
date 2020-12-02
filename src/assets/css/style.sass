@@ -39,7 +39,7 @@
    font-size: 70px
    font-family: $font-headline
    font-weight: bold
-   line-height: 1.09
+   line-height: 1.2
    +xl-block()
       font-size: 50px
    +md-block()
@@ -124,16 +124,17 @@
    font-size: 12px
    font-family: $font-text
    font-weight: 700
-   line-height: 2
+   line-height: 1.5
 
 @mixin font-text-bold
    font-size: 16px
    font-family: $font-text
    font-weight: 700
-   line-height: 1.5
+   line-height: 1.4
 
 
-
+html 
+   scroll-behavior: smooth
 .very-big-text
    font: $very-big-text
    @include md-block
@@ -163,7 +164,8 @@
 .font-h6
    +font-h6()
 
-
+.font-small-text
+   +font-small-text()
 ::placeholder
    color: $gray
 
@@ -211,6 +213,9 @@ a
       opacity: .6
 .wrapper
    +wrapper()
+   &_absolut
+      position: absolute
+      width: 100%
 .row
    +row-flex()
 
@@ -279,7 +284,7 @@ a
    color: #000    
    margin: 16px 0px
 
-.wpcf7   
+.wpcf7 
 .wpcf7-form
    position: relative
    p
@@ -401,7 +406,7 @@ a
 
 
 .inline-form-one-field
-   .wpcf7-form
+   .wpcf7-form      
       input:not([type="submit"])
          border-top-left-radius: 10px
          border-bottom-left-radius: 10px
@@ -447,6 +452,7 @@ a
 
 .vertical-form      
    .wpcf7-form      
+      margin-bottom: 12px
       p
          flex-direction: column
       input:not([type="submit"])
@@ -501,6 +507,8 @@ footer
    margin-bottom: $offset-block / 4
    +xl-block()
       padding: 60px 60px
+   +md-block()
+      padding: 20px 30px;
    &__content
       +row-flex()
       align-items: center
@@ -605,6 +613,12 @@ footer
    justify-content: center
    align-items: center
    width: 100%
+
+
+.col-8
+   +col()
+   +size(8)
+
 @import './blocks/naviagtion'
 @import './blocks/main-slider'
 @import './blocks/lead-section'
@@ -633,5 +647,5 @@ footer
 @import '../gblocks/whatDoYouGet/whatDoYouGet'
 @import '../gblocks/checkandlist/checkandlist'
 @import 'multiselect';
-
+@import './blocks/fact.sass'
 

@@ -8,7 +8,7 @@
          </div>
 
          <?php if (get_field('button_link')) { ?>
-            <a href="<?php the_field('button_link')?>" style="background-image: linear-gradient(<?php the_field('gradient', $post_id )?>);" class="button"><?php the_field('button_text',)?></a>
+            <a target="_blank" href="<?php the_field('button_link')?>" style="background-image: linear-gradient(<?php the_field('gradient', $post_id )?>);" class="button"><?php the_field('button_text',)?></a>
             <?php } ?>
             
       </div>

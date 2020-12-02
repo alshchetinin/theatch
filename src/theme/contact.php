@@ -26,7 +26,7 @@ Template Post Type: page
                var map = new mapboxgl.Map({
                   container: 'map',
                   style: 'mapbox://styles/alshchetinin/ckf5kfpiq2pi81aqw2ma8ka1f',
-                  center: [65.5276283,57.15679],
+                  center: [65.530141, 57.156898],
                   zoom: 16.15
                });
 
@@ -35,7 +35,7 @@ Template Post Type: page
                el.setAttribute('src','<?php echo get_template_directory_uri()?>/img/svg/map-icon.svg')
                el.setAttribute('width','20px')
                var marker = new mapboxgl.Marker(el)
-                  .setLngLat([65.5276283,57.15679])
+                  .setLngLat([65.530141, 57.156898])
                   .addTo(map);
 
                   map.scrollZoom.disable();

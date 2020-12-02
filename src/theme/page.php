@@ -6,8 +6,7 @@
             <h1 class="very-big-text"><?php the_title() ?></h1>
          </div>         
       </div>
-      <div class="row">
-      <h2 class="font-gigant">Страница в разработке</h2>
+      <div class="row">      
       </div>
    </div>
 </section>

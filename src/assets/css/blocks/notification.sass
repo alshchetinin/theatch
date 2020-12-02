@@ -1,5 +1,4 @@
-.notification-inner
-   justify-content: space-around
+.notification-inner   
    +row-flex()
    @include xl-block
       justify-content: space-between
@@ -13,7 +12,9 @@
    justify-content: space-around
    +col()
    +size(10)
-   +size-xl(12)         
+   +size-xl(12)      
+   +shift-left(1)
+   +shift-xl-left(0)   
    @include md-block
       flex-direction: column
       align-items: flex-start
@@ -51,5 +52,6 @@
          width: 100%
          margin: 1rem 0
    &__bottom
+      margin-top: 12px
       font-size: 12px
-      line-height: 16px
+      line-height: 14px

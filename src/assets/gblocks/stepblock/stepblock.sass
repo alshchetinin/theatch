@@ -30,9 +30,19 @@
       height: 100%
       background: $architect-black
       left: 49px
-      z-index: -1
+      z-index: -2
       @include md-block
          display: none
+      &-animation
+         position: absolute
+         top: 0px
+         width: 2px
+         height: 0%         
+         left: 49px
+         z-index: -1
+         background: var(--gradient)
+         @include md-block
+            display: none
    &__content
       +row-flex() 
       @include md-block
@@ -45,20 +55,25 @@
          display: flex
          font-size: 56px;
          line-height: 56px;
-         color: #000000;
+         color: $architect-black  
          align-items: center
          justify-content: center
          width: 96px
          height: 96px
-         background: $architect-black
-         border: 2px solid $architect-black
+         background: linear-gradient(90deg, #000000 0%, #000000 100%)
+         box-shadow: inset 0px 0px 0px 2px #333
          border-radius: 100%
+         transition: all 0.1s $transition
          @include md-block
             font-size: 24px
             line-height: 24px
             width: 36px
             height: 36px
             margin-bottom: 16px
+      &_animation
+         background: var(--gradient) !important
+         color: #fff !important
+         box-shadow: none !important
    &__text
       +col()
       +u-size(6,7, 20px)
@@ -85,6 +100,8 @@
                
    &:last-of-type .step-item__line
       display: none
+   &:last-of-type .step-item__line-animation
+      display: none      
    &:last-of-type
       padding-bottom: 0px   
    &:not(:first-of-type) .step-item__number

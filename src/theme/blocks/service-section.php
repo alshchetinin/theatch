@@ -26,7 +26,7 @@
                      $property->the_post(); ?>
                      <div class="service-wrapper__col">
                         <!-- begin servict-item -->
-                        <div class="servict-item">
+                        <div class="servict-item" style="--gradient: linear-gradient(<?php the_field('gradient') ?>)">
                            <a href="<?php the_permalink()?>"></a>
                            <div class="servict-item__top">
 

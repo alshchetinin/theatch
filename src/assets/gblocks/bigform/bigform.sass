@@ -13,12 +13,10 @@
       align-items: flex-start      
          
    &__headline
-      font: $h1
+      +font-h1()
       flex-basis: 24%
       @include xl-block
-         margin-bottom: 32px 
-      @include md-block
-         font-size: $h1-mobile   
+         margin-bottom: 32px  
    &__form      
       @include xl-block
          margin-bottom: 32px

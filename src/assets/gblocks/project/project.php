@@ -23,7 +23,7 @@
                      <div class="sevice-project" style="background-image: url(<?php echo $url ?>)">
                      <div class="sevice-project__overlay"></div>
                      
-                        <a href="<?php the_permalink() ?>"></a>                        
+                        <a href="<?php the_permalink() ?>" target="_blank"></a>                        
                         <div class="sevice-project__title font-h2">
                            <?php the_title() ?>
                         </div>

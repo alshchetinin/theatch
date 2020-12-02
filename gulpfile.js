@@ -72,6 +72,7 @@ Header & Footer JavaScript Boundles
 const headerJS = [
 	"./node_modules/jquery/dist/jquery.js",
 	"./node_modules/slick-carousel/slick/slick.js",
+	"./node_modules/gsap/dist/ScrollTrigger.js",
 	"./node_modules/gsap/dist/gsap.js",
 	"./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
 	"./node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
@@ -364,6 +365,20 @@ function stylesBlocksProd() {
 
 }
 
+function guttenbergBlocksProdPhp() {
+	return src("./src/assets/gblocks/**/*.php").pipe(dest("./dist/themes/" + themeName + "/gblocks"))
+}		
+
+function guttenbergBlocksProdJS(){
+	return src("./src/assets/gblocks/**/*.js")
+	.pipe(
+		babel({
+			presets: ["@babel/preset-env"]
+		})
+	)
+	.pipe(dest("./dist/themes/" + themeName + "/gblocks"))
+}
+
 function headerScriptsProd() {
 	return src(headerJS)
 		.pipe(plumber({ errorHandler: onError }))
@@ -427,6 +442,8 @@ exports.prod = series(
 	stylesProd,
 	stylesBlocksProd,
 	stylesEditorProd,
+	guttenbergBlocksProdJS, 
+	guttenbergBlocksProdPhp,
 	headerScriptsProd,
 	footerScriptsProd,
 	pluginsProd,

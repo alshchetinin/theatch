@@ -2,6 +2,9 @@
    padding: 228px 0px 120px 0px
    z-index: 1
    margin-bottom: $offset-block / 2 
+   +md-block()
+      padding: 120px 0px 120px 0px
+      margin-bottom: $offset-block / 4 
    &__row
       +row-flex()
    &__content
@@ -27,6 +30,8 @@
    &__text
       font: $text
       font-weight: bold
+      +md-block()
+         text-align: center
    &__form
 
    div

@@ -36,6 +36,7 @@ Template Post Type: project
 
                <?php $args = array(
                   'post_type' => 'project',
+                  'canetory_name' => get_the_category(),
                   'posts_per_page' => 3,
                   'orderby' => 'date',
                );
