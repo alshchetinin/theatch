@@ -18,6 +18,21 @@ Template Post Type: page
 
 <section class="map-section">
    <div class="wrapper">
+   <div class="row">
+            <!-- begin contact-item -->
+            <div class="contact-item">
+            Приезжайте к нам в офис:<br>г. Тюмень ул. Кирова, д. 40
+            </div>
+
+            <div class="contact-item">
+            Работаем с 9:00 до 18:00.<br>В выходные отдыхаем.
+            </div>
+
+            <div class="contact-item">
+            +7 922 001 00 50<br>hello@thearchitect.digital            
+            </div>
+            <!-- end contact-item -->
+      </div>
       <div class="row">
          <!-- begin map -->
          <div id="map" class="map">
@@ -45,21 +60,7 @@ Template Post Type: page
          </div>
          <!-- end map -->
       </div>
-      <div class="row">
-            <!-- begin contact-item -->
-            <div class="contact-item">
-            Приезжайте к нам в офис:<br>г. Тюмень ул. Кирова, д. 40
-            </div>
 
-            <div class="contact-item">
-            Работаем с 9:00 до 18:00.<br>В выходные отдыхаем.
-            </div>
-
-            <div class="contact-item">
-            +7 922 001 00 50<br>hello@thearchitect.digital            
-            </div>
-            <!-- end contact-item -->
-      </div>
    </div>
 </section>
 
