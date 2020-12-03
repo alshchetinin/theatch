@@ -36,14 +36,14 @@
       <?php endwhile; ?>
 
    </div>
-   <!-- <div class="fact_absolute">
+   <div class="fact_absolute">
       <div class="wrapper">
          <div class="fact">
             <div class="fact__container">
                <div class="fact__numbers">
                   <div class="fact-number">
                      <div class="fact-number__title">5 000+</div>
-                     <div class="fact-number__description">проектов<br>в работе</div>
+                     <div class="fact-number__description">лидов в&nbsp;месяц приводим нашим клиентам</div>
                   </div>
                   <div class="fact-number">
                      <div class="fact-number__title">от 20 до 80%</div>
@@ -51,19 +51,22 @@
                   </div>
                   <div class="fact-number">
                      <div class="fact-number__title">30+</div>
-                     <div class="fact-number__description">жилых комплексов в продвижении</div>
+                     <div class="fact-number__description">жилых комплексов в&nbsp;продвижении</div>
                   </div>
                   <div class="fact-number">
                      <div class="fact-number__title">15+</div>
-                     <div class="fact-number__description">городов, в которых мы продвигаем застройщиков</div>
+                     <div class="fact-number__description">городов, в&nbsp;которых мы&nbsp;продвигаем застройщиков</div>
                   </div>
                </div>
                <a href="#footer" class="fact__button">
-                  <p>Давайте придумаем что-то новое вместе</p>
-
+                  <p>Обсудим ваши задачи и найдём эффективное решение</p>
+                  <small>
+                  Оставить заявку
                   <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M41.3581 6L40.0733 7.51307L45.5223 13.9304L1 13.9304V16.0696L45.5223 16.0696L40.0733 22.4869L41.3581 24L49 15.0014L41.3581 6.00285V6Z" fill="white" />
                   </svg>
+                  </small>
+                  
                </a>
             </div>
 
@@ -71,7 +74,7 @@
 
          </div>
       </div>
-   </div> -->
+   </div>
 
 
 </section>
