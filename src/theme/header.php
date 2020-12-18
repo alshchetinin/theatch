@@ -20,10 +20,10 @@
          ?>
       </nav>
       <div class="popup-menu-mobile__contact">
-         <a href="" class="insta">instagram</a>
-         <a href="" class="facebook">facebook</a>
-         <a href="" class="mail">mail</a>
-         <a href="" class="phone">+7 922 001 00 50</a>
+         <a href="https://www.instagram.com/architect.digital" class="insta">instagram</a>
+         <a href="https://www.facebook.com/thearchitectdigital" class="facebook">facebook</a>
+         <a href="mailto:hello@thearchitect.digital" class="mail">mail</a>
+         <a href="tel:+79220010050" class="phone">+7 922 001 00 50</a>
       </div>
 
    </div>

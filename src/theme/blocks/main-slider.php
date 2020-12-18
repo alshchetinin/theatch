@@ -59,7 +59,10 @@
                   </div>
                </div>
                <a href="#footer" class="fact__button">
-                  <p>Обсудим ваши задачи и найдём эффективное решение</p>
+                  <p>Обсудим ваши задачи и найдём эффективное решение
+                  <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M41.3581 6L40.0733 7.51307L45.5223 13.9304L1 13.9304V16.0696L45.5223 16.0696L40.0733 22.4869L41.3581 24L49 15.0014L41.3581 6.00285V6Z" fill="white" />
+                  </svg></p>
                   <small>
                   Оставить заявку
                   <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">

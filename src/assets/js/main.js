@@ -1,4 +1,14 @@
+   
 $(document).ready(function () {
+   // $('.partner-container').masonry({
+   //    // options
+   //    itemSelector: '.parnet-item',
+   //    columnWidth: '.grid-sizer',
+   //    // gutter: 20,
+   //    // horizontalOrder: true,
+   //    percentPosition: true,
+   //    initLayout: true,
+   //    });
 
    gsap.registerPlugin(ScrollTrigger)
    var onSlideToggleTitle = () => {

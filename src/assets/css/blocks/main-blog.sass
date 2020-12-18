@@ -15,11 +15,17 @@
    transition: all .3s $transition
    margin-top: 40px
    margin-bottom: 40px
+   position: relative
    +col()
-   +u-size(2.5, 10, 20px)
+   +u-size(3.3333, 10, 20px)
    +size-lg(3)
    +size-md(6)
    +size-sm(12)
+   a
+      position: absolute
+      height: 100%
+      width: 100%
+      top: 0
    &__picture
       margin-bottom: 20px
       img
@@ -72,3 +78,46 @@
    +size-lg(3)
    +size-md(6)
    +size-sm(12)
+
+
+//Выдача на странице блога
+.blog-list   
+   +row-flex()
+   .blog-item_big
+      +size(12)
+      +size-md(6)
+      +size-sm(12)
+      display: flex
+      flex-direction: row-reverse
+      justify-content: space-between
+      +md-block()
+         display: block
+      .blog-item__content
+         padding-right: 40px   
+         width: 30%      
+         +md-block()
+            width: 100%
+      .blog-item__picture
+         margin-bottom: 20px
+         width: 60%
+         +md-block()
+            width: 100%
+         img
+            border-radius: 10px
+      .blog-item__tag
+         font-size: 14px
+         line-height: 19px
+         letter-spacing: 0.75px
+         text-transform: uppercase
+         margin-bottom: 15px
+      .blog-item__date
+         font-size: 12px
+         line-height: 120%
+         margin-bottom: 26px
+      .blog-item__title
+         font: $h3
+         font-weight: 700
+         margin-bottom: 20px
+      .blog-item__excerpt
+         font-size: 16px
+         line-height: 22px

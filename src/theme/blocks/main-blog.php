@@ -1,3 +1,5 @@
+<?php if( get_field('main-blog') == 'true' ): ?>
+
 <section id="main-blog" class="g-block">
    <div class="wrapper">
       <div class="main-blog">
@@ -6,44 +8,55 @@
          </div>
          <div class="main-blog__list">
             <div class="main-blog__set">
-               <div class="blog-item">
-                  <div class="blog-item__picture"> <img src="<?php echo get_template_directory_uri()?>/img/bg.png"
-                        alt=""></div>
-                  <div class="blog-item__tag">управление — 30 мин чтения</div>
-                  <div class="blog-item__date">25.05.2020</div>
-                  <div class="blog-item__title"> Что почитать?: уроки, извлеченные из управления персоналом</div>
-                  <div class="blog-item__excerpt">Управление персоналом - это одна из самых сложных и критичных частей
-                     ведения любого бизнеса. Здесь мы делимся некоторыми идеями, которые мы опубликовали за эти годы.
-                  </div>
-                  <div class="blog-item__author"></div>
-               </div>
-               <div class="blog-item">
-                  <div class="blog-item__picture"> <img src="<?php echo get_template_directory_uri()?>/img/bg.png"
-                        alt=""></div>
-                  <div class="blog-item__tag">Управление</div>
-                  <div class="blog-item__date">25.05.2020</div>
-                  <div class="blog-item__title"> Что почитать?: уроки, извлеченные из управления персоналом</div>
-                  <div class="blog-item__excerpt">Управление персоналом - это одна из самых сложных и критичных частей
-                     ведения любого бизнеса. Здесь мы делимся некоторыми идеями, которые мы опубликовали за эти годы.
-                  </div>
-                  <div class="blog-item__author"></div>
-               </div>
-               <div class="blog-item">
-                  <div class="blog-item__picture"> <img src="<?php echo get_template_directory_uri()?>/img/bg.png"
-                        alt=""></div>
-                  <div class="blog-item__tag">Управление</div>
-                  <div class="blog-item__date">25.05.2020</div>
-                  <div class="blog-item__title"> Что почитать?: уроки, извлеченные из управления персоналом</div>
-                  <div class="blog-item__excerpt">Управление персоналом - это одна из самых сложных и критичных частей
-                     ведения любого бизнеса. Здесь мы делимся некоторыми идеями, которые мы опубликовали за эти годы.
-                  </div>
-                  <div class="blog-item__author"></div>
-               </div>
 
-               <div class="vc-ru">
-                  <a href=""></a>
-                  Посмотреть все стаьи на vc.ru
-               </div>
+         <?php
+         function getNumEnding($number, $endingArray) {
+            $number = $number % 100;
+            if ($number>=11 && $number<=19) {
+               $ending=$endingArray[2];
+            }
+            else {
+               $i = $number % 10;
+               switch ($i) {
+                  case (1): $ending = $endingArray[0]; break;
+                  case (2):
+                  case (3):
+                  case (4): $ending = $endingArray[1]; break;
+                  default: $ending=$endingArray[2];
+               }
+            }
+            return $ending;
+         }         
+
+         global $post;
+         $args = array( 'posts_per_page' => 3, );
+         $myposts = get_posts( $args );
+         foreach( $myposts as $post ){ setup_postdata($post);
+            $post_content_length = strlen($post->post_content);
+            $time_for_read = $post_content_length / 1500;
+            $time_for_read = round($time_for_read);
+            $time_ending = getNumEnding($time_for_read, array('минуту','минуты','минут'));
+            ?>
+
+            <article class="blog-item">
+               <a href="<?php the_permalink() ?>"></a>
+                  <div class="blog-item__picture"> <?php the_post_thumbnail()?></div>
+                  <div class="blog-item__tag"><?php echo get_the_category()[0]->name?> — <?php echo $time_for_read; ?> <?php echo  $time_ending; ?> чтения</div>
+                  <div class="blog-item__date"><?php echo get_the_date()?></div>
+                  <div class="blog-item__title"> <?php the_title()?></div>
+                  <div class="blog-item__excerpt"><?php the_excerpt()?>
+                  </div>
+                  <div class="blog-item__author"></div>
+               </article>
+
+
+
+
+         <?php
+         }
+         wp_reset_postdata();
+         ?>
+
             </div>
 
 
@@ -52,33 +65,7 @@
       </div>
 
    </div>
-   <div class="wrapper">
-      <div class="title-section title-section_mail">
-         <h2>Либо подписаться на&nbsp;рассылку</h2>
-      </div>
-      <div class="notification-inner">
-         <div class="notification">
-            <div class="notification__picture">
-               <img src="<?php echo get_template_directory_uri()?>/img/avatar.png" alt="">
-               <div class="notification__title">
-                  Рассказываем про топ 10 решиний, которые помогут поднять конверсию сайта
-                  на 15% от текущей
-               </div>
-            </div>
-
-            <div class="notification__form">
-               <div class="notification__wrapper">
-                  <?php echo do_shortcode('[contact-form-7 id="14" title="subscription form"]')?>
-               </div>
-               <p class="notification__bottom">Получайте полезные статьи и свежие новости о диджитал-маркетинге </p>
-            </div>
-            <script>
-            document.addEventListener('wpcf7mailsent', function(event) {
-               $('.notification__success').addClass('notification__success_done');
-            }, false);
-            </script>
-         </div>
-      </div>
-   </div>
+   <?php echo get_template_part('/blocks/notification') ?>
 
 </section>
+<?php endif; ?>

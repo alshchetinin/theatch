@@ -96,7 +96,7 @@
             <div class="main-project-mobile-list-item__tag"><?php echo $tag ?></div>
             <div class="main-project-mobile-list-item__title"><?php echo $title?></div>
             <div class="main-project-mobile-list-item__description"><?php echo $description?></div>
-            <div class="main-project-mobile-list-item__button"><a href="#" class="button">Смотреть<img src="<?php echo get_template_directory_uri() ?>/img/svg/button-arrow.svg" alt=""></a></div>
+            <div class="main-project-mobile-list-item__button"><a href="<?php echo $link ?>" class="button">Смотреть<img src="<?php echo get_template_directory_uri() ?>/img/svg/button-arrow.svg" alt=""></a></div>
          </div>
 
          <?php endwhile; ?>

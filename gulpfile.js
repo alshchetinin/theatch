@@ -77,7 +77,8 @@ const headerJS = [
 	"./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
 	"./node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
 	"./node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js",
-	"./node_modules/mapbox-gl/dist/mapbox-gl.js"
+	"./node_modules/mapbox-gl/dist/mapbox-gl.js",
+
 ];
 
 const footerJS = ["./src/assets/js/**"];

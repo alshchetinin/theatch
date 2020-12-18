@@ -1,0 +1,37 @@
+.partner-container  
+  columns: 3
+  column-gap: 20px
+  width: 100%
+  +md-block()
+    columns: 2
+  +xs-block()
+    columns: 1    
+
+.grid-sizer
+  +col()
+  +u-size(3,10,20px)
+  margin-bottom: 20px
+.parnet-item
+  // +col()
+  // +u-size(3,10,20px)
+  width: 100%
+  break-inside: avoid
+  padding: 24px 12px 0px 24px
+  border: 3px solid #4F4F4F
+  box-sizing: border-box
+  border-radius: 10px
+  margin-bottom: 20px
+  // background: red
+  +md-block()
+    // width: 45%
+  &__logo
+    display: flex
+    align-items: center
+    margin-bottom: 16px
+    img
+      margin-right: 12px
+  &__text
+    margin-bottom: 24px
+    a
+      border-bottom: 1px solid
+
