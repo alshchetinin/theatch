@@ -169,6 +169,11 @@ html
 ::placeholder
    color: $gray
 
+.font-graient
+   background: linear-gradient(90deg, #F857A6 0%, #FF5858 100%)
+   -webkit-text-fill-color: transparent
+   -webkit-background-clip: text
+
 ::selection
    background-color: $architect-red
    color: #fff
@@ -202,6 +207,10 @@ body
    overflow-x: hidden
    color: $white
    background: #000
+
+.project-template-default, .project-template
+   color: $architect-black
+   background: $white
 
 p
    font-family: $font-text
@@ -249,15 +258,22 @@ a
    overflow-y: hidden
 
 .header,
-   margin: $offset-block / 4 0px
-
-.home .header, .page-template-page-service .header, .single-project .header, .services-template-page-service .header
-   position: absolute
+   padding: $offset-block / 4 0px 0px 0px
+   position: fixed
    top: 0   
    z-index: 9999
    width: 100%
+   transition: all .7s $transition
    @include sm-block()
-      margin: 20px 0px
+      padding: $offset-block / 8 0px 0px 0px
+
+.header-fixed
+   position: fixed
+   // top: 0   
+   // z-index: 9999
+   // width: 100%
+
+
 
 .button
    padding: 10px
@@ -505,6 +521,7 @@ footer
    border-radius: 10px
    padding: 60px 0px
    margin-bottom: $offset-block / 4
+   color: $white
    +xl-block()
       padding: 60px 60px
    +md-block()
@@ -533,13 +550,65 @@ footer
    +margin-block()   
    
 .page-title
-   margin-top: $offset-block / 2 
+   margin-top: 150px
    margin-bottom: $offset-block / 2 
    +col()
    +size(12)
    +md-block()
-       margin-top: 44px
-       margin-bottom: 44px
+      margin-bottom: 44px
+   +sm-block()
+      margin-top: 100px
+      
+
+//контакты
+
+.contact-content
+   +col()
+   +size(7)          
+   +size-xl(12)  
+   +shift-left(1)
+   +shift-xl-left(0)
+   a
+      display: inline-block
+      margin-bottom: 62px
+      +sm-block()
+         margin-bottom: 32px
+      +to(320px)
+         font-size: 22px         
+   display: flex
+   flex-direction: column
+   .brif
+      // border-bottom: 4px dashed    
+      position: relative
+      &::after
+         content: '_ _ _ _ _ _ _ _ _ _ _ _ '   
+         position: absolute
+         bottom: -20px
+         width: 100%
+         left: 0px
+         background: linear-gradient(90deg, #F857A6 0%, #FF5858 100%)
+         -webkit-text-fill-color: transparent
+         -webkit-background-clip: text
+         +sm-block()
+            bottom: -10px
+.social
+   display: flex
+.social-item
+   margin-bottom: 0px
+   display: block
+.contact
+   +row-flex()
+   +font-h2
+   line-height: 1.6
+.adress, .time
+   +col()
+   +u-size(3, 6, 20px)
+   +sm-block()
+      +u-size(6, 6, 20px)
+      margin-bottom: 24px
+
+
+
 
 .map
    +col()
@@ -549,12 +618,6 @@ footer
    margin-bottom: 48px
    outline: none
 
-.contact-item
-   +col()
-   +size(4)
-   +size-md(12)
-   +font-h2()
-   margin-bottom: 38px
 
 .text-service
    +col()
@@ -619,6 +682,7 @@ footer
    +col()
    +size(8)
 
+@import './blocks/hero'
 @import './blocks/naviagtion'
 @import './blocks/main-slider'
 @import './blocks/lead-section'

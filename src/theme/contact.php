@@ -9,8 +9,29 @@ Template Post Type: page
 <section>
    <div class="wrapper">
       <div class="row">
-         <div class="page-title">
-            <h1 class="very-big-text"><?php the_title() ?></h1>
+         <div class="contact-content page-title">
+            <a href="tel:<?php the_field('footer-from-phone', 'option')?>" class="font-super-gigant"><?php the_field('footer-from-phone', 'option')?></a>            
+            <a class="font-gigant font-graient" href="mailto:hello@thearchitect.digital" class="href">hello@thearchitect.digital</a>
+            <a class="font-gigant font-graient brif" href="#footer" class="href">заполнить бриф</a>
+            <div class="social">
+               <a target="_blank" href="https://www.instagram.com/architect.digital" class="social-item">
+                  <img src="<?php echo get_template_directory_uri()?>/img/instagram.png" alt="" class="img-responsive">
+               </a>   
+               <a target="_blank" href="https://www.youtube.com/channel/UCZFiL1va2Xj-L-ChhofD4_Q" class="social-item">
+                  <img src="<?php echo get_template_directory_uri()?>/img/youtube.png" alt="" class="img-responsive">
+               </a>   
+               <a target="_blank" href="https://www.behance.net/architectdigital" class="social-item">
+                  <img src="<?php echo get_template_directory_uri()?>/img/behans.png" alt="" class="img-responsive">
+               </a>                                             
+            </div>
+            <div class="contact">
+               <div class="adress">
+               Приезжайте к нам в офис:<br>г. Тюмень ул. Кирова, д. 40
+               </div>
+               <div class="time">
+               Работаем с 9:00 до 18:00.<br>В выходные отдыхаем.
+               </div>
+            </div>
          </div>
       </div>
    </div>
@@ -18,21 +39,6 @@ Template Post Type: page
 
 <section class="map-section">
    <div class="wrapper">
-   <div class="row">
-            <!-- begin contact-item -->
-            <div class="contact-item">
-            Приезжайте к нам в офис:<br>г. Тюмень ул. Кирова, д. 40
-            </div>
-
-            <div class="contact-item">
-            Работаем с 9:00 до 18:00.<br>В выходные отдыхаем.
-            </div>
-
-            <div class="contact-item">
-            +7 922 001 00 50<br>hello@thearchitect.digital            
-            </div>
-            <!-- end contact-item -->
-      </div>
       <div class="row">
          <!-- begin map -->
          <div id="map" class="map">

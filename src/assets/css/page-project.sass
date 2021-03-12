@@ -27,25 +27,29 @@
 	&__content
 		display: flex
 		flex-direction: column
-		justify-content: center
-		align-items: center
+		justify-content: center		
 		width: 100%
-		height: 100%
+		height: 100%		
 		position: absolute
-		top: 0		
+		top: 0				
 	&__title
-		padding: 0px 50px
-		text-align: center
-		text-transform: uppercase
+		padding: 0px 50px				
 		margin-bottom: 0.5rem
+		font-size: 50px
+		line-height: 1.1
+		font-family: $font-headline
+		font-weight: 600
+		+md-block()
+			font-size: 28px
 	&__description
+		padding: 0px 50px
+		display: none
 
 
 	&__tag
 		position: absolute
 		bottom: 16px		
-		display: flex
-		justify-content: center
+		display: flex		
 		width: 100%
 		span
 			text-align: center
@@ -53,3 +57,4 @@
 			background: $architect-black
 			border-radius: 10px
 			display: block
+			margin: 0px 50px	

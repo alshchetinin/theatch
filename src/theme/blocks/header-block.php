@@ -3,9 +3,9 @@
       <div class="logo">
          <a href="/"><img src="<?php echo get_template_directory_uri()?>/img/svg/logo.svg" alt=""></a>
       </div>
-      <div class="logo_mobile">
+      <!-- <div class="logo_mobile">
          <a href="/"><img src="<?php echo get_template_directory_uri()?>/img/svg/logo-mini.svg" alt="" class=""></a>
-      </div>
+      </div> -->
 
 
       <div class="header-service">

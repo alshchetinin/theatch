@@ -170,5 +170,152 @@
 
    &__mail
 
+   &_popup
+      width: 100%
+      margin: 0px
+      color: $white
+      +md-block()
+         padding: 24px
+      .card-form__title
+         
+      input
+         width: 100% !important       
+
+.offset-left
+   +col()
+   +size(1)
+   +lg-block()
+      display: none
+.fare-title
+   +col()
+   +size(8)
+   margin-bottom: 100px
+.fare-item
+   background: $architect-black   
+   +col()
+   +size(3)
+   +size-lg(4)
+   +size-md(12)
+   +md-block()
+      margin-bottom: 40px
+      &:last-of-type
+         margin-bottom: 20px
+   border-radius: 10px
+   &__text
+      padding: 40px
+      border-bottom: 1px solid #000
+   &__title
+      +font-h1()
+      margin-bottom: 20px
+   &__subtitle
+      margin-bottom: 28px
+
+   &__btn
+      padding: 10px 30px
+      border: 1px solid #ffffff
+      background-color: $architect-black
+      border-radius: 10px
+      display: inline-block
+      margin-bottom: 20px
+
+   &__price
+      +font-h1()
+
+   &__list
+      padding: 40px
+      ul 
+         li
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            font-size: 16px
+            font-weight: 600
+            margin-bottom: 20px   
+            +xs-block()
+               font-size: 14px
+               margin-bottom: 16px         
+   &__icon
+      width: 25%
+      opacity: 0.5
+   &__list-text      
+      width: 75%
+   &_selected
+      background: var(--selected)
+      .fare-item__btn
+         background-color: #fff
+         color: $architect-black
 
 
+
+.additional-service
+   +col()
+   +size(9)
+   +shift-left(1)
+   +shift-xl-left(0)
+   +size-md(12)
+   +size-xl(12)
+   margin-top: 20px
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr   
+   background: $architect-black
+   border-radius: 10px
+   
+   +md-block()
+      grid-template-columns: 1fr 
+   &__title
+      padding: 60px 28px 60px 48px
+      border-right: 1px solid #000
+      +md-block()
+         padding: 24px
+      h3
+         +font-h1()
+         margin-bottom: 16px
+      p
+         margin-bottom: 16px
+   &__btn
+      padding: 10px 30px
+      border: 1px solid #ffffff
+      background-color: $architect-black
+      border-radius: 10px
+      display: inline-block
+      margin-bottom: 46px
+      +md-block()
+         margin-bottom: 20px
+   
+   &__video
+      padding: 60px 28px 60px 28px
+      position: relative
+      +md-block()
+         padding: 24px
+   &__cover
+      height: 100%
+      width: 100%
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat
+      position: relative
+      border-radius: 10px
+      +md-block()
+         height: 300px
+   &__play
+      position: absolute
+      top: calc(50% - 29px)
+      left: calc(50% - 29px)
+      width: 58px
+      height: 58px
+      background: rgba(255, 255, 255, 0.2)
+      backdrop-filter: blur(10px)
+      border-radius: 1000px
+      display: flex
+      align-items: center
+      justify-content: center
+   &__info
+      padding: 60px 28px 60px 28px
+      +md-block()
+         padding: 24px      
+      h3
+         +bigtext()
+         margin-bottom: 32px
+      ul         
+         li
+            margin-bottom: 32px

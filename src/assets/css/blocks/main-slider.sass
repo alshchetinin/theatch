@@ -56,3 +56,54 @@
       +size(10)
       margin-top: 25px
       transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1)
+
+.main-slider-dots   
+   position: absolute
+   bottom: 150px   
+   z-index: 1
+   width: 100%
+   +to(1660px)
+      bottom: 120px
+   +to(1360px)
+      bottom: 90px      
+   +md-block()
+      bottom: 16%
+   +sm-block()
+      bottom: 220px  
+   +to(375px)
+      bottom: 240px      
+   +to(340px)
+      bottom: 360px         
+   &__row
+      +row-flex()
+      .slick-dots  
+         display: flex
+         justify-content: space-between                    
+         +col()
+         +size(2) 
+         +size-sm(8)
+         +size-md(6)
+         +size-lg(3)
+         +shift-left(1)
+         +shift-sm-left(0)
+         li
+            flex-grow: 1
+            margin-right: 4px
+            opacity: .5
+            &:last-of-type
+               margin-right: 0px
+            button
+               width: 100%
+               text-indent: -9999px
+               font-size: 0px
+               cursor: pointer
+               height: 4px               
+               border: none
+               background: $gray
+               border-radius: 100px
+               &:focus
+                  outline: none
+         .slick-active  
+            opacity: 1
+   
+   

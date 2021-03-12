@@ -1,0 +1,92 @@
+.hero
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+
+.hero-text  
+  +col()
+  +size(6)
+  +shift-left(1)
+  +shift-xl-left(0)  
+  +size-xl(6)
+  +size-lg(12)
+  z-index: 1
+  h1
+    line-height: 70px
+    +md-block()
+      line-height: 160%
+      span
+        font-size: 24px  
+
+.hero-text-mobile
+  +md-block()
+    font-size: 18px !important
+    margin-bottom: 24px
+    display: block
+    line-height: 140%
+
+.slider-dots
+  background: linear-gradient(180deg, #454545 0%, #454545 100%)   
+  border-radius: 4px
+  padding: 0px 10px
+  // transition: all .3s $transition
+  &:hover
+    opacity: 1
+
+.slider-dots_active
+  background: var(--active-slider-color)
+  .branding
+    color: $architect-black
+
+.hero-slider  
+  position: absolute
+  top: 0px
+  height: 100vh
+  width: 100%
+  +md-block()
+    display: none
+  &__slide
+    position: relative
+    height: 100vh
+
+  &__pic
+    // position: absolute
+    // right: 0px
+    // top: 50%
+    // bottom: 50%
+    // width: 574px
+    // height: 530px
+    +col()
+    +size(6)
+    +shift-left(7)
+    +shift-xl-left(6)  
+    +size-xl(6)
+.slide-img-wrapper
+  height: 100vh
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  overflow: hidden
+
+.blur
+  &_1
+    position: absolute
+    left: 0px
+    bottom: 0px    
+    width: 358px
+    height: 358px
+    filter: blur(348px)
+  &_2
+    position: absolute
+    right: 0px
+    top: 0px    
+    width: 358px
+    height: 358px
+    filter: blur(348px)    
+
+
+
+

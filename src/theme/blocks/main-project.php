@@ -31,7 +31,7 @@
          <div class="main-project-list-item" id="project3">
             <div class="main-project-list-item__content">
                <a class="main-project-list-item__link" href="/project/strana-development/"></a>
-               <div class="main-project-list-item__tag">Продвижение</div>
+               <div class="main-project-list-item__tag">Контент-маркетинг</div>
                <div class="main-project-list-item__title">Страна девелопмент</div>
                <!-- <div class="main-project-list-item__client">Партнер-строй</div> -->
                <div class="main-project-list-item__description">Ежемесячно обрабатываем около 50 обращений и получаем 10 лидов и 25 заявок на сайте с переходов из постов в соцсетях.</div>

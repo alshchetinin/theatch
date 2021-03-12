@@ -11,7 +11,7 @@ Template Post Type: page, services
 <section>
    <div class="wrapper">
       <div class="row">
-        <h2 class="font-super-gigant" style="text-align: center;">Страница в разработке и скоро будет готова </h2>
+        <h2 class="font-super-gigant page-title" style="text-align: center;">Страница в разработке и скоро будет готова </h2>
       </div>
       <div class="row">
          <div class="lt-animation">         

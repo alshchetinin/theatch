@@ -70,13 +70,13 @@ const pluginsListProd = [
 Header & Footer JavaScript Boundles
 -------------------------------------------------------------------------------------------------- */
 const headerJS = [
-	"./node_modules/jquery/dist/jquery.js",
-	"./node_modules/slick-carousel/slick/slick.js",
-	"./node_modules/gsap/dist/ScrollTrigger.js",
-	"./node_modules/gsap/dist/gsap.js",
-	"./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
-	"./node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
-	"./node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js",
+	"./node_modules/jquery/dist/jquery.min.js",
+	"./node_modules/slick-carousel/slick/slick.min.js",
+	"./node_modules/gsap/dist/ScrollTrigger.min.js",
+	"./node_modules/gsap/dist/gsap.min.js",
+	"./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js",
+	"./node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js",
+	"./node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js",
 	"./node_modules/mapbox-gl/dist/mapbox-gl.js",
 
 ];

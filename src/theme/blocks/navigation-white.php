@@ -30,24 +30,7 @@
          </div>
 
       </div>
-      <!-- <div class="navigation__item navigation__item_blog">
-         <div class="navigation__title">
-            Блог
-         </div>
-         <div class="navigation__post">
-            <?php
-                  global $post;
-                  $args = array( 'numberposts' => 2 , 'orderby' => 'date', 'order' => 'ASC');
-                  $myposts = get_posts( $args );
-                  foreach( $myposts as $post ){ setup_postdata($post);
-               ?>
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-            <?php }
-                  wp_reset_postdata();
-               ?>
-         </div>
-      </div> -->
    </div>
 
 

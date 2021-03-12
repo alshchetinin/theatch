@@ -39,6 +39,7 @@ Template Post Type: project
                   'canetory_name' => get_the_category(),
                   'posts_per_page' => 3,
                   'orderby' => 'date',
+                  'offset' => 1
                );
                $property = new WP_Query($args); // дальше - loop
                if ($property->have_posts()) : ?>

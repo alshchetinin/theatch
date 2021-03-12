@@ -1,14 +1,34 @@
-   
+
 $(document).ready(function () {
-   // $('.partner-container').masonry({
-   //    // options
-   //    itemSelector: '.parnet-item',
-   //    columnWidth: '.grid-sizer',
-   //    // gutter: 20,
-   //    // horizontalOrder: true,
-   //    percentPosition: true,
-   //    initLayout: true,
-   //    });
+
+
+   var scrollPos = 0
+   $(window).scroll(function () {
+      var thisScroll = $(this).scrollTop();
+      console.log(thisScroll)
+      if (thisScroll < scrollPos) {
+         $('.header').css({
+            'backdrop-filter': 'blur(10px)',
+            'top': '0px',
+            'background': 'rgba(51, 51, 51, 0.5)'
+
+         });
+      } else {
+         $('.header').css({
+            'backdrop-filter': 'blur(0px)',
+            'top': '-150px',
+            'background': 'rgba(51, 51, 51, 0)'
+
+         });
+      } if (thisScroll <= 10) {
+         $('.header').css({
+            'backdrop-filter': 'blur(0px)',
+            'top': '0px',
+            'background': 'rgba(51, 51, 51, 0)'
+         });
+      }
+      scrollPos = thisScroll
+   });
 
    gsap.registerPlugin(ScrollTrigger)
    var onSlideToggleTitle = () => {
@@ -24,7 +44,7 @@ $(document).ready(function () {
       onSlideToggleTitle()
    }
 
-   gsap.from('.fact_absolute', {duration: 2, y: 300, ease: "back.out(1)"})
+   gsap.from('.fact_absolute', { duration: 2, y: 300, ease: "back.out(1)" })
 
    $('.burger').click(function (e) {
       e.preventDefault();
@@ -51,41 +71,42 @@ $(document).ready(function () {
    appHeight();
 
 
-   $('input[type="file"]').change(function(){
+   $('input[type="file"]').change(function () {
       var value = $("input[type='file']").val();
       $('.custom-file-field__text').text('Файл загружен');
       $('.custom-file-field').addClass('custom-file-field_done')
-  });   
-   
+   });
 
-  $('.step-item').each(function (index, element) {
-     // element == this
-     $(this).addClass('step-trigger' + index)  
-     $(this).find('.step-item__line-animation').addClass('step-line-animation' + index)     
-     $(this).find('.step-item__number span').addClass('step-line-animation-number' + index)            
-      
+
+   $('.step-item').each(function (index, element) {
+      // element == this
+      $(this).addClass('step-trigger' + index)
+      $(this).find('.step-item__line-animation').addClass('step-line-animation' + index)
+      $(this).find('.step-item__number span').addClass('step-line-animation-number' + index)
+
       gsap.to('.step-line-animation' + index, {
          scrollTrigger: {
-            trigger: ".step-trigger" + index,           
-            start: "top center",
-            end : "bottom center",
-            scrub: true,
-            ease: "linear",            
-          },
-         height: "100%",
-         ease: "linear" },
-         0)
-
-
-         ScrollTrigger.create({
             trigger: ".step-trigger" + index,
             start: "top center",
             end: "bottom center",
             scrub: true,
-            ease: "linear",            
-            onEnter: () => $(this).find('.step-item__number span').addClass('step-item__number_animation'),            
-            onLeaveBack: () => $(this).find('.step-item__number span').removeClass('step-item__number_animation'),
-          });
+            ease: "linear",
+         },
+         height: "100%",
+         ease: "linear"
+      },
+         0)
+
+
+      ScrollTrigger.create({
+         trigger: ".step-trigger" + index,
+         start: "top center",
+         end: "bottom center",
+         scrub: true,
+         ease: "linear",
+         onEnter: () => $(this).find('.step-item__number span').addClass('step-item__number_animation'),
+         onLeaveBack: () => $(this).find('.step-item__number span').removeClass('step-item__number_animation'),
+      });
 
       // gsap.to('.step-line-animation-number' + index, {
       //    scrollTrigger: {
@@ -101,9 +122,9 @@ $(document).ready(function () {
       //    ease: "linear"}, 
       //    0)             
 
-  });
+   });
 
-  
+
 
 
 });
@@ -117,6 +138,6 @@ $(document).ready(function () {
 //    function removeSuccess() {
 //       $('.form_success').removeClass('form_success');
 //     }
-    
+
 //     setTimeout(removeSuccess, 1000);
 // }, false);

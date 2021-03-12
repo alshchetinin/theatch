@@ -4,9 +4,14 @@
     position: absolute
     width: 100%
     bottom: 10px
+    z-index: 2
+    +to(1680px)
+      bottom: -50px
+    +to(1470px)
+      bottom: -50px      
     +md-block()
       position: relative
-      margin-top: -64px
+      // margin-top: -64px
   &__container
     +col()
     +size(12)
